@@ -41,7 +41,7 @@ export const ServicesCard = styled.div<{ active?: boolean }>`
             button {
               background: var(--Dark-900, #10141b);
               border: 1px solid #0000;
-              color: var(--Black, #000);
+              color: var(--White, #fff);
             }
           `
         : css`
@@ -89,6 +89,10 @@ export const Description = styled.p`
 `;
 export const ListItem = styled.h3`
   && {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
     /* PARAGRAPH */
     font-family: Lexend;
     font-size: 16px;

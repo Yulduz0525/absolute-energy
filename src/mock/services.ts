@@ -2,7 +2,7 @@ import Icons from "@/assets/icons";
 
 export const services = [
   {
-    id: "1",
+    id: 1,
     title: "Service plan #1",
     description:
       "Lorem Ipsum - это текст-'рыба', часто используемый в печати и вэб-дизайне",
@@ -22,7 +22,7 @@ export const services = [
     ],
   },
   {
-    id: "2",
+    id: 2,
     title: "Service plan #2",
     description:
       "Lorem Ipsum - это текст-'рыба', часто используемый в печати и вэб-дизайне",
@@ -42,7 +42,7 @@ export const services = [
     ],
   },
   {
-    id: "3",
+    id: 3,
     title: "Service plan #3",
     description:
       "Lorem Ipsum - это текст-'рыба', часто используемый в печати и вэб-дизайне",

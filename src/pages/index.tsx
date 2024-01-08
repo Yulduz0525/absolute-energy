@@ -18,6 +18,8 @@ export default function Home() {
         <Sections.Portfolios />
         <Sections.ApplyForm />
         <Sections.Services />
+        <Sections.ClientSays />
+        <Sections.Partners />
       </main>
     </>
   );
