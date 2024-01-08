@@ -19,7 +19,7 @@ export default function AboutUs({}: Props) {
     <AboutUsWrap>
       <Styles.Container>
         <Styles.Column width="100%" items="center" gap={20}>
-          <Styles.Row size={6} difference={16}>
+          <Styles.Row size={{ xs: 12, md: 6 }} difference={{ xs: 0, md: 16 }}>
             <GalleryWrap>
               <WomenImage
                 className="gallery_Item"
@@ -43,7 +43,7 @@ export default function AboutUs({}: Props) {
               </Styles.Column>
             </GalleryWrap>
           </Styles.Row>
-          <Styles.Row size={6} difference={16} gap={16}>
+          <Styles.Row size={{ xs: 12, md: 6 }} difference={{ xs: 0, md: 16 }}>
             <SectionTitle>О компании</SectionTitle>
             <Styles.Column width="100%" direction={"column"} gap={18}>
               <SectionDesc>
