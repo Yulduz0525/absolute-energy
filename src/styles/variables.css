@@ -1,0 +1,436 @@
+:root {
+  --border-radius: 30px;
+  /* -------------------- gradient -------------------- */
+
+  /* -------------------- colors -------------------- */
+  --white: #fff;
+
+  /* -------------------- shadow -------------------- */
+  --shadow-1: 0px 8px 32px 0px rgba(38, 38, 38, 0.2);
+}
+
+/* -------------------- typhography xs -------------------- */
+@media (min-width: 320px) {
+  :root {
+    /* typography1 */
+    --typography1-300: normal 300 36px "Lexend";
+    --typography1-400: normal 400 36px "Lexend";
+    --typography1-500: normal 500 36px "Lexend";
+    --typography1-700: normal 700 36px "Lexend";
+
+    /* typography2 */
+    --typography2-300: normal 300 28px "Lexend";
+    --typography2-400: normal 400 28px "Lexend";
+    --typography2-500: normal 500 28px "Lexend";
+    --typography2-700: normal 700 28px "Lexend";
+
+    /* typography3 */
+    --typography3-300: normal 300 24px "Lexend";
+    --typography3-400: normal 400 24px "Lexend";
+    --typography3-500: normal 500 24px "Lexend";
+    --typography3-700: normal 700 24px "Lexend";
+
+    /* typography4 */
+    --typography4-300: normal 300 18px "Lexend";
+    --typography4-400: normal 400 18px "Lexend";
+    --typography4-500: normal 500 18px "Lexend";
+    --typography4-700: normal 700 18px "Lexend";
+
+    /* typography5 */
+    --typography5-300: normal 300 16px "Lexend";
+    --typography5-400: normal 400 16px "Lexend";
+    --typography5-500: normal 500 16px "Lexend";
+    --typography5-700: normal 700 16px "Lexend";
+
+    /* typography6 */
+    --typography6-300: normal 300 14px "Lexend";
+    --typography6-400: normal 400 14px "Lexend";
+    --typography6-500: normal 500 14px "Lexend";
+    --typography6-700: normal 700 14px "Lexend";
+
+    /* typography7 */
+    --typography7-300: normal 300 12px "Lexend";
+    --typography7-400: normal 400 12px "Lexend";
+    --typography7-500: normal 500 12px "Lexend";
+    --typography7-700: normal 700 12px "Lexend";
+
+    /* typography8 */
+    --typography8-300: normal 300 10px "Lexend";
+    --typography8-400: normal 400 10px "Lexend";
+    --typography8-500: normal 500 10px "Lexend";
+    --typography8-700: normal 700 10px "Lexend";
+
+    /* typography9 */
+    --typography9-300: normal 300 8px "Lexend";
+    --typography9-400: normal 400 8px "Lexend";
+    --typography9-500: normal 500 8px "Lexend";
+    --typography9-700: normal 700 8px "Lexend";
+
+    /* typography10 */
+    --typography10-300: normal 300 6px "Lexend";
+    --typography10-400: normal 400 6px "Lexend";
+    --typography10-500: normal 500 6px "Lexend";
+    --typography10-700: normal 700 6px "Lexend";
+
+    /* typography11 */
+    --typography11-300: normal 300 4px "Lexend";
+    --typography11-400: normal 400 4px "Lexend";
+    --typography11-500: normal 500 4px "Lexend";
+    --typography11-700: normal 700 4px "Lexend";
+  }
+}
+
+/* -------------------- typhography sm -------------------- */
+@media (min-width: 576px) {
+  :root {
+    /* typography1 */
+    --typography1-300: normal 300 38px "Lexend";
+    --typography1-400: normal 400 38px "Lexend";
+    --typography1-500: normal 500 38px "Lexend";
+    --typography1-700: normal 700 38px "Lexend";
+
+    /* typography2 */
+    --typography2-300: normal 300 32px "Lexend";
+    --typography2-400: normal 400 32px "Lexend";
+    --typography2-500: normal 500 32px "Lexend";
+    --typography2-700: normal 700 32px "Lexend";
+
+    /* typography3 */
+    --typography3-300: normal 300 28px "Lexend";
+    --typography3-400: normal 400 28px "Lexend";
+    --typography3-500: normal 500 28px "Lexend";
+    --typography3-700: normal 700 28px "Lexend";
+
+    /* typography4 */
+    --typography4-300: normal 300 20px "Lexend";
+    --typography4-400: normal 400 20px "Lexend";
+    --typography4-500: normal 500 20px "Lexend";
+    --typography4-700: normal 700 20px "Lexend";
+
+    /* typography5 */
+    --typography5-300: normal 300 18px "Lexend";
+    --typography5-400: normal 400 18px "Lexend";
+    --typography5-500: normal 500 18px "Lexend";
+    --typography5-700: normal 700 18px "Lexend";
+
+    /* typography6 */
+    --typography6-300: normal 300 16px "Lexend";
+    --typography6-400: normal 400 16px "Lexend";
+    --typography6-500: normal 500 16px "Lexend";
+    --typography6-700: normal 700 16px "Lexend";
+
+    /* typography7 */
+    --typography7-300: normal 300 14px "Lexend";
+    --typography7-400: normal 400 14px "Lexend";
+    --typography7-500: normal 500 14px "Lexend";
+    --typography7-700: normal 700 14px "Lexend";
+
+    /* typography8 */
+    --typography8-300: normal 300 10px "Lexend";
+    --typography8-400: normal 400 10px "Lexend";
+    --typography8-500: normal 500 10px "Lexend";
+    --typography8-700: normal 700 10px "Lexend";
+
+    /* typography9 */
+    --typography9-300: normal 300 8px "Lexend";
+    --typography9-400: normal 400 8px "Lexend";
+    --typography9-500: normal 500 8px "Lexend";
+    --typography9-700: normal 700 8px "Lexend";
+
+    /* typography10 */
+    --typography10-300: normal 300 6px "Lexend";
+    --typography10-400: normal 400 6px "Lexend";
+    --typography10-500: normal 500 6px "Lexend";
+    --typography10-700: normal 700 6px "Lexend";
+
+    /* typography11 */
+    --typography11-300: normal 300 4px "Lexend";
+    --typography11-400: normal 400 4px "Lexend";
+    --typography11-500: normal 500 4px "Lexend";
+    --typography11-700: normal 700 4px "Lexend";
+  }
+}
+
+/* -------------------- typhography md -------------------- */
+@media (min-width: 768px) {
+  :root {
+    /* typography1 */
+    --typography1-300: normal 300 42px "Lexend";
+    --typography1-400: normal 400 42px "Lexend";
+    --typography1-500: normal 500 42px "Lexend";
+    --typography1-700: normal 700 42px "Lexend";
+
+    /* typography2 */
+    --typography2-300: normal 300 38px "Lexend";
+    --typography2-400: normal 400 38px "Lexend";
+    --typography2-500: normal 500 38px "Lexend";
+    --typography2-700: normal 700 38px "Lexend";
+
+    /* typography3 */
+    --typography3-300: normal 300 32px "Lexend";
+    --typography3-400: normal 400 32px "Lexend";
+    --typography3-500: normal 500 32px "Lexend";
+    --typography3-700: normal 700 32px "Lexend";
+
+    /* typography4 */
+    --typography4-300: normal 300 24px "Lexend";
+    --typography4-400: normal 400 24px "Lexend";
+    --typography4-500: normal 500 24px "Lexend";
+    --typography4-700: normal 700 24px "Lexend";
+
+    /* typography5 */
+    --typography5-300: normal 300 20px "Lexend";
+    --typography5-400: normal 400 20px "Lexend";
+    --typography5-500: normal 500 20px "Lexend";
+    --typography5-700: normal 700 20px "Lexend";
+
+    /* typography6 */
+    --typography6-300: normal 300 18px "Lexend";
+    --typography6-400: normal 400 18px "Lexend";
+    --typography6-500: normal 500 18px "Lexend";
+    --typography6-700: normal 700 18px "Lexend";
+
+    /* typography7 */
+    --typography7-300: normal 300 16px "Lexend";
+    --typography7-400: normal 400 16px "Lexend";
+    --typography7-500: normal 500 16px "Lexend";
+    --typography7-700: normal 700 16px "Lexend";
+
+    /* typography8 */
+    --typography8-300: normal 300 12px "Lexend";
+    --typography8-400: normal 400 12px "Lexend";
+    --typography8-500: normal 500 12px "Lexend";
+    --typography8-700: normal 700 12px "Lexend";
+
+    /* typography9 */
+    --typography9-300: normal 300 10px "Lexend";
+    --typography9-400: normal 400 10px "Lexend";
+    --typography9-500: normal 500 10px "Lexend";
+    --typography9-700: normal 700 10px "Lexend";
+
+    /* typography10 */
+    --typography10-300: normal 300 8px "Lexend";
+    --typography10-400: normal 400 8px "Lexend";
+    --typography10-500: normal 500 8px "Lexend";
+    --typography10-700: normal 700 8px "Lexend";
+
+    /* typography11 */
+    --typography11-300: normal 300 6px "Lexend";
+    --typography11-400: normal 400 6px "Lexend";
+    --typography11-500: normal 500 6px "Lexend";
+    --typography11-700: normal 700 6px "Lexend";
+  }
+}
+
+/* -------------------- typhography lg -------------------- */
+@media (min-width: 992px) {
+  :root {
+    /* typography1 */
+    --typography1-300: normal 300 48px "Lexend";
+    --typography1-400: normal 400 48px "Lexend";
+    --typography1-500: normal 500 48px "Lexend";
+    --typography1-700: normal 700 48px "Lexend";
+
+    /* typography2 */
+    --typography2-300: normal 300 42px "Lexend";
+    --typography2-400: normal 400 42px "Lexend";
+    --typography2-500: normal 500 42px "Lexend";
+    --typography2-700: normal 700 42px "Lexend";
+
+    /* typography3 */
+    --typography3-300: normal 300 36px "Lexend";
+    --typography3-400: normal 400 36px "Lexend";
+    --typography3-500: normal 500 36px "Lexend";
+    --typography3-700: normal 700 36px "Lexend";
+
+    /* typography4 */
+    --typography4-300: normal 300 28px "Lexend";
+    --typography4-400: normal 400 28px "Lexend";
+    --typography4-500: normal 500 28px "Lexend";
+    --typography4-700: normal 700 28px "Lexend";
+
+    /* typography5 */
+    --typography5-300: normal 300 22px "Lexend";
+    --typography5-400: normal 400 22px "Lexend";
+    --typography5-500: normal 500 22px "Lexend";
+    --typography5-700: normal 700 22px "Lexend";
+
+    /* typography6 */
+    --typography6-300: normal 300 20px "Lexend";
+    --typography6-400: normal 400 20px "Lexend";
+    --typography6-500: normal 500 20px "Lexend";
+    --typography6-700: normal 700 20px "Lexend";
+
+    /* typography7 */
+    --typography7-300: normal 300 18px "Lexend";
+    --typography7-400: normal 400 18px "Lexend";
+    --typography7-500: normal 500 18px "Lexend";
+    --typography7-700: normal 700 18px "Lexend";
+
+    /* typography8 */
+    --typography8-300: normal 300 14px "Lexend";
+    --typography8-400: normal 400 14px "Lexend";
+    --typography8-500: normal 500 14px "Lexend";
+    --typography8-700: normal 700 14px "Lexend";
+
+    /* typography9 */
+    --typography9-300: normal 300 12px "Lexend";
+    --typography9-400: normal 400 12px "Lexend";
+    --typography9-500: normal 500 12px "Lexend";
+    --typography9-700: normal 700 12px "Lexend";
+
+    /* typography10 */
+    --typography10-300: normal 300 10px "Lexend";
+    --typography10-400: normal 400 10px "Lexend";
+    --typography10-500: normal 500 10px "Lexend";
+    --typography10-700: normal 700 10px "Lexend";
+
+    /* typography11 */
+    --typography11-300: normal 300 8px "Lexend";
+    --typography11-400: normal 400 8px "Lexend";
+    --typography11-500: normal 500 8px "Lexend";
+    --typography11-700: normal 700 8px "Lexend";
+  }
+}
+
+/* -------------------- typhography xl -------------------- */
+@media (min-width: 1200px) {
+  :root {
+    /* typography1 */
+    --typography1-300: normal 300 64px "Lexend";
+    --typography1-400: normal 400 64px "Lexend";
+    --typography1-500: normal 500 64px "Lexend";
+    --typography1-700: normal 700 64px "Lexend";
+
+    /* typography2 */
+    --typography2-300: normal 300 48px "Lexend";
+    --typography2-400: normal 400 48px "Lexend";
+    --typography2-500: normal 500 48px "Lexend";
+    --typography2-700: normal 700 48px "Lexend";
+
+    /* typography3 */
+    --typography3-300: normal 300 42px "Lexend";
+    --typography3-400: normal 400 42px "Lexend";
+    --typography3-500: normal 500 42px "Lexend";
+    --typography3-700: normal 700 42px "Lexend";
+
+    /* typography4 */
+    --typography4-300: normal 300 32px "Lexend";
+    --typography4-400: normal 400 32px "Lexend";
+    --typography4-500: normal 500 32px "Lexend";
+    --typography4-700: normal 700 32px "Lexend";
+
+    /* typography5 */
+    --typography5-300: normal 300 24px "Lexend";
+    --typography5-400: normal 400 24px "Lexend";
+    --typography5-500: normal 500 24px "Lexend";
+    --typography5-700: normal 700 24px "Lexend";
+
+    /* typography6 */
+    --typography6-300: normal 300 22px "Lexend";
+    --typography6-400: normal 400 22px "Lexend";
+    --typography6-500: normal 500 22px "Lexend";
+    --typography6-700: normal 700 22px "Lexend";
+
+    /* typography7 */
+    --typography7-300: normal 300 18px "Lexend";
+    --typography7-400: normal 400 18px "Lexend";
+    --typography7-500: normal 500 18px "Lexend";
+    --typography7-700: normal 700 18px "Lexend";
+
+    /* typography8 */
+    --typography8-300: normal 300 16px "Lexend";
+    --typography8-400: normal 400 16px "Lexend";
+    --typography8-500: normal 500 16px "Lexend";
+    --typography8-700: normal 700 16px "Lexend";
+
+    /* typography9 */
+    --typography9-300: normal 300 14px "Lexend";
+    --typography9-400: normal 400 14px "Lexend";
+    --typography9-500: normal 500 14px "Lexend";
+    --typography9-700: normal 700 14px "Lexend";
+
+    /* typography10 */
+    --typography10-300: normal 300 12px "Lexend";
+    --typography10-400: normal 400 12px "Lexend";
+    --typography10-500: normal 500 12px "Lexend";
+    --typography10-700: normal 700 12px "Lexend";
+
+    /* typography11 */
+    --typography11-300: normal 300 10px "Lexend";
+    --typography11-400: normal 400 10px "Lexend";
+    --typography11-500: normal 500 10px "Lexend";
+    --typography11-700: normal 700 10px "Lexend";
+  }
+}
+
+/* -------------------- typhography 2xl -------------------- */
+@media (min-width: 1440px) {
+  :root {
+    /* typography1 */
+    --typography1-300: normal 300 72px "Lexend";
+    --typography1-400: normal 400 72px "Lexend";
+    --typography1-500: normal 500 72px "Lexend";
+    --typography1-700: normal 700 72px "Lexend";
+
+    /* typography2 */
+    --typography2-300: normal 300 64px "Lexend";
+    --typography2-400: normal 400 64px "Lexend";
+    --typography2-500: normal 500 64px "Lexend";
+    --typography2-700: normal 700 64px "Lexend";
+
+    /* typography3 */
+    --typography3-300: normal 300 48px "Lexend";
+    --typography3-400: normal 400 48px "Lexend";
+    --typography3-500: normal 500 48px "Lexend";
+    --typography3-700: normal 700 48px "Lexend";
+
+    /* typography4 */
+    --typography4-300: normal 300 36px "Lexend";
+    --typography4-400: normal 400 36px "Lexend";
+    --typography4-500: normal 500 36px "Lexend";
+    --typography4-700: normal 700 36px "Lexend";
+
+    /* typography5 */
+    --typography5-300: normal 300 28px "Lexend";
+    --typography5-400: normal 400 28px "Lexend";
+    --typography5-500: normal 500 28px "Lexend";
+    --typography5-700: normal 700 28px "Lexend";
+
+    /* typography6 */
+    --typography6-300: normal 300 24px "Lexend";
+    --typography6-400: normal 400 24px "Lexend";
+    --typography6-500: normal 500 24px "Lexend";
+    --typography6-700: normal 700 24px "Lexend";
+
+    /* typography7 */
+    --typography7-300: normal 300 20px "Lexend";
+    --typography7-400: normal 400 20px "Lexend";
+    --typography7-500: normal 500 20px "Lexend";
+    --typography7-700: normal 700 20px "Lexend";
+
+    /* typography8 */
+    --typography8-300: normal 300 18px "Lexend";
+    --typography8-400: normal 400 18px "Lexend";
+    --typography8-500: normal 500 18px "Lexend";
+    --typography8-700: normal 700 18px "Lexend";
+
+    /* typography9 */
+    --typography9-300: normal 300 16px "Lexend";
+    --typography9-400: normal 400 16px "Lexend";
+    --typography9-500: normal 500 16px "Lexend";
+    --typography9-700: normal 700 16px "Lexend";
+
+    /* typography10 */
+    --typography10-300: normal 300 14px "Lexend";
+    --typography10-400: normal 400 14px "Lexend";
+    --typography10-500: normal 500 14px "Lexend";
+    --typography10-700: normal 700 14px "Lexend";
+
+    /* typography11 */
+    --typography11-300: normal 300 12px "Lexend";
+    --typography11-400: normal 400 12px "Lexend";
+    --typography11-500: normal 500 12px "Lexend";
+    --typography11-700: normal 700 12px "Lexend";
+  }
+}
