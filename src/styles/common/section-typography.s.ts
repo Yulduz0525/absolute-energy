@@ -16,9 +16,9 @@ export const SectionSubTitle = styled.h5`
     &::after {
       content: "";
       position: absolute;
-      left: 0;
-      right: 0;
+      left: 50%;
       bottom: -16px;
+      transform: translateX(-50%);
 
       width: 120px;
       height: 2px;
@@ -48,4 +48,3 @@ export const SectionTitle = styled.h1`
     letter-spacing: -0.8px;
   }
 `;
-
