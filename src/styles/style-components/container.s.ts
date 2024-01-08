@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   && {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     /* max-width: "100vw"; */
     width: 100%;
     transition: all 250ms ease-in-out;

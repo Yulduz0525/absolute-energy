@@ -3,9 +3,11 @@ import { Banner } from "./banner";
 import { MainServices } from "./main-services";
 import { Portfolios } from "./portfolios";
 
-export default {
+const section = {
   Banner,
   AboutUs,
   MainServices,
   Portfolios,
-};
+}
+
+export default section;
