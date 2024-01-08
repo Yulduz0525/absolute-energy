@@ -3,6 +3,10 @@ import styled, { css } from "styled-components";
 export const CarouselWrap = styled.div`
   && {
     width: 65%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 `;
 export const CarouselList = styled.div`
@@ -16,6 +20,7 @@ export const CarouselList = styled.div`
   align-items: flex-start;
   gap: 48px;
 `;
+
 export const CarouselItem = styled.div<{
   translate: number;
   collapsed: boolean;

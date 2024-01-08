@@ -53,7 +53,7 @@ export type rowPropsSizeMedia = {
 const mediaSizes: {
   [K in TMedia]: string;
 } = {
-  xs: "320px",
+  xs: "0px",
   sm: "576px",
   md: "768px",
   lg: "992px",
@@ -64,7 +64,7 @@ const mediaLists: {
   key: TMedia;
   minWidth: string;
 }[] = [
-  { key: "xs", minWidth: "320px" },
+  { key: "xs", minWidth: "0px" },
   { key: "sm", minWidth: "576px" },
   { key: "md", minWidth: "768px" },
   { key: "lg", minWidth: "992px" },
@@ -121,7 +121,7 @@ export const Row = styled.div<rowProps>`
               @media (min-width: ${mediaSizes[key]}) {
                 width: ${({ size, difference = 0 }) => {
                   return `calc(${(size[key] / 12) * 100}% - ${
-                    difference[key]
+                    typeof difference === "object" ? difference[key] : difference || 0
                   }px)`;
                 }};
               }

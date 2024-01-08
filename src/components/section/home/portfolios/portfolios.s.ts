@@ -8,6 +8,12 @@ export const PortfoliosWrap = styled.div`
       align-items: center;
       gap: 24px;
     }
+
+    @media (max-width: 768px) {
+      & > div {
+        flex-direction: column;
+      }
+    }
   }
 `;
 
@@ -18,6 +24,10 @@ export const InfoBlock = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const Title = styled.h3`
   color: var(--secondary-500, #0e2824);

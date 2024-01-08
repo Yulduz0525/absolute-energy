@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 
-const success = (props: Props) => {
+export const SuccessIcon = (props: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
