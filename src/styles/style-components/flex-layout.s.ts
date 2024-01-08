@@ -27,7 +27,8 @@ export type columnProps = {
   wrap?: TMediaWrap | TWrap;
   direction?: TMediaDirection | TDirection;
   content?: TMediaContent | TContent;
-  items?: TMediaItems | TItems;
+  align_items?: TMediaItems | TItems;
+  align_content?: TMediaItems | TItems;
   gap?: TMediaNumber | number;
   row_gap?: TMediaNumber | number;
   column_gap?: TMediaNumber | number;
@@ -63,7 +64,7 @@ const mediaSizes: {
 const mediaLists: {
   key: TMedia;
   minWidth: string;
-}[] = [
+}[] = [ 
   { key: "xs", minWidth: "0px" },
   { key: "sm", minWidth: "576px" },
   { key: "md", minWidth: "768px" },
@@ -83,8 +84,14 @@ const commonStyles = mediaLists.map((media) => {
           : direction && direction};
       justify-content: ${({ content }) =>
         typeof content === "object" ? content[media.key] : content && content};
-      align-items: ${({ items }) =>
-        typeof items === "object" ? items[media.key] : items && items};
+      align-items: ${({ align_items }) =>
+        typeof align_items === "object"
+          ? align_items[media.key]
+          : align_items && align_items};
+      align-content: ${({ align_content }) =>
+        typeof align_content === "object"
+          ? align_content[media.key]
+          : align_content && align_content};
       gap: ${({ gap }) =>
         typeof gap === "object"
           ? `${!gap ? 0 : gap[media.key]}px`
@@ -121,7 +128,9 @@ export const Row = styled.div<rowProps>`
               @media (min-width: ${mediaSizes[key]}) {
                 width: ${({ size, difference = 0 }) => {
                   return `calc(${(size[key] / 12) * 100}% - ${
-                    typeof difference === "object" ? difference[key] : difference || 0
+                    typeof difference === "object"
+                      ? difference[key]
+                      : difference || 0
                   }px)`;
                 }};
               }
