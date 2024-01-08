@@ -12,6 +12,7 @@ export default function About({}: Props) {
       <about.Banner />
       <about.AboutUs />
       <about.Reposibilaty />
+      <about.FAQ />
     </AboutWrap>
   )
 }

@@ -21,6 +21,10 @@ export const BannerWrap = styled.div`
       gap: 16px;
       position: relative;
     }
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 `;
 export const Title = styled.h1`
@@ -28,12 +32,7 @@ export const Title = styled.h1`
   text-align: center;
 
   /* HEADING1 */
-  font-family: Lexend;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.8px;
+  font: var(--typography2-700);
 `;
 export const SubTitle = styled.h5`
   text-align: center;
@@ -82,6 +81,10 @@ export const Statistics = styled.div`
     position: absolute;
     bottom: -40px;
     z-index: 9;
+
+    @media (max-width: 768px) {
+      /* flex-direction: column; */
+    }
   }
 `;
 export const StatisticItem = styled.div`
@@ -92,6 +95,10 @@ export const StatisticItem = styled.div`
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: 768px) {
+      padding: 8px;
+    }
   }
 `;
 export const StatTitle = styled.h1`
