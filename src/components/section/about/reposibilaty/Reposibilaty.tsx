@@ -23,7 +23,7 @@ export default function Reposibilaty({}: Props) {
               src={teem_work2.src}
               width={300}
               height={450}
-              alt="work process"
+              alt="work process" ///sasas
             />
             <TeemWorkImage
               src={teem_work3.src}
