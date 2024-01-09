@@ -21,12 +21,14 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
             items="center"
             gap={16}
           >
-            <Styles.SectionSubTitle>Main Services</Styles.SectionSubTitle>
-            <Styles.SectionTitle>Основные направления</Styles.SectionTitle>
+            <Styles.SectionSubTitle data-aos="fade-up">Main Services</Styles.SectionSubTitle>
+            <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300" >Основные направления</Styles.SectionTitle>
           </Styles.Column>
           <Styles.Column width="100%" gap={24}>
             {mock.mainServices.map((mainService, index) => (
               <Styles.Row
+                data-aos="fade-up"
+                data-aos-delay={index * 300 + ""}
                 key={index}
                 size={{ xs: 12, sm: 6, lg: 4 }}
                 difference={{ xs: 0, sm: 12, lg: 16 }}

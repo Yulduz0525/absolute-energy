@@ -20,6 +20,7 @@ export const services = [
         label: "Advantages #3",
       },
     ],
+    animations: {"data-aos": "fade-right", "data-aos-delay": "500"},
   },
   {
     id: 2,
@@ -40,6 +41,7 @@ export const services = [
         label: "Advantages #3",
       },
     ],
+    animations: {"data-aos": "fade-up"},
   },
   {
     id: 3,
@@ -60,5 +62,6 @@ export const services = [
         label: "Advantages #3",
       },
     ],
+    animations: {"data-aos": "fade-left", "data-aos-delay": "500"},
   },
 ];

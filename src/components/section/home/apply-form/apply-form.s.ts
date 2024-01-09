@@ -22,6 +22,12 @@ export const ApplyFormWrap = styled.section`
       align-items: center;
       gap: 32px;
     }
+
+    @media (max-width: 768px) {
+      & > div {
+        padding: 36px 24px;
+      }
+    }
   }
 `;
 export const Title = styled.h1`
@@ -87,6 +93,7 @@ export const FormButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   width: 100%;
   padding: 12px 20px;
@@ -105,4 +112,13 @@ export const FormButton = styled.button`
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    translate: -50% -50%;
+    left: 50%;
+  }
 `;

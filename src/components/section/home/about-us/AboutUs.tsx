@@ -44,7 +44,7 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
                 items="flex-start"
                 gap={14}
               >
-                <Styles.Column direction="column" items="flex-start" gap={12}>
+                <Styles.Column  data-aos="fade-left" direction="column" items="flex-start" gap={12}>
                   <SubTitle>About us</SubTitle>
                   <SubTitleLine />
                 </Styles.Column>
@@ -53,8 +53,8 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
                   direction="column"
                   items="flex-start"
                 >
-                  <Title>О компании</Title>
-                  <Description>
+                  <Title data-aos="fade-left" data-aos-delay="300">О компании</Title>
+                  <Description  data-aos="fade-left" data-aos-delay="600">
                     Компания «ABSOLUTE ENERGY» основана в 2016 г. и является
                     официальным дилером торговых марок AKSA, Cummins, RID,
                     GENPOWER и Mitsubishi на территории Республики Узбекистан.
@@ -67,7 +67,7 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
                   </Description>
                 </Styles.Column>
               </Styles.Column>
-              <AboutBtn>
+              <AboutBtn data-aos="fade-left" data-aos-delay="800">
                 Подробнее <Icons.arrowRight.Broken />
               </AboutBtn>
             </Styles.Column>
