@@ -33,6 +33,7 @@ export const Carousel: FC<ICarouselProps> = (props) => {
       <CarouselList>
         {portfolios.map((item, index) => (
           <CarouselItem
+            key={index}
             translate={item.positionId * itemWidth}
             collapsed={activeIndex >= index}
             bg={item.bg}

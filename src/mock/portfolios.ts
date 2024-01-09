@@ -11,6 +11,7 @@ export const portfolios = [
       "4 x 1675 kVA ",
       "ATS for 4 units of generators",
     ],
+    collaped: true,
   },
   {
     id: 1,

@@ -20,7 +20,7 @@ export default function Reposibilaty({}: Props) {
       <Styles.Container>
         <Styles.Column width="100%" items="center" gap={50}>
           <Styles.Row size={{xs: 12, md: 6}} difference={{ xs: 0, md: 25}} direction={"column"} gap={32}>
-            <SectionTitle>Наши задачи</SectionTitle>
+            <SectionTitle data-aos="">Наши задачи</SectionTitle>
             <ReponseList>
               <span>Поставка</span>
               <li>подготовка генератора,</li>
@@ -45,12 +45,15 @@ export default function Reposibilaty({}: Props) {
           </Styles.Row>
           <Styles.Row size={{xs: 12, md: 6}} difference={{xs: 0, md: 25}} direction={"row"} gap={32}>
             <TeemWorkImage
+              data-aos="fade-up"
+              data-aos-delay="600"
               src={teem_work2.src}
               width={300}
               height={450}
               alt="work process" ///sasas
             />
             <TeemWorkImage
+              data-aos="fade-up-left"
               src={teem_work3.src}
               width={300}
               height={450}
@@ -59,13 +62,13 @@ export default function Reposibilaty({}: Props) {
           </Styles.Row>
         </Styles.Column>
         <ServiceList>
-          <li>
+          <li data-aos="fade-up" data-aos-delay="0">
             <SuccessIcon /> Поставка
           </li>
-          <li>
+          <li data-aos="fade-up" data-aos-delay="300">
             <SuccessIcon /> Установка
           </li>
-          <li>
+          <li data-aos="fade-up" data-aos-delay="600">
             <SuccessIcon /> Сервисное обслуживание
           </li>
         </ServiceList>
