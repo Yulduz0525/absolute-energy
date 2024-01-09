@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled, { css } from "styled-components";
 
 export const NavbarWrap = styled.nav`
@@ -47,12 +48,41 @@ export const NavbarWrap = styled.nav`
   }
 `;
 
+export const LogoLink = styled(Link)`
+  font-size: 24px;
+
+  a {
+    display: none !important;
+  }
+`
 export const NavList = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+   }
 `;
 
+export const MenuButton = styled.button`
+  width: fit-content;
+  outline-width: 0;
+  border: none;
+  
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  path {
+    stroke: #222;
+  }
+`
 export const NavItem = styled.li`
   && {
     list-style: none;
@@ -73,6 +103,12 @@ export const NavItem = styled.li`
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+    }
+
+    @media (max-width: 768px) {
+      a {
+        display: none !important;
+      }
     }
 
     &:after {

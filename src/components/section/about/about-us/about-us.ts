@@ -65,4 +65,8 @@ export const TeemImage = styled(Image)`
     display: block;
     width: 60%;
     height: 200px;
+
+    @media (max-width: 768px) {
+      height: 140px;
+    }
 `
