@@ -44,7 +44,7 @@ export const NavsList = styled.ul`
   li {
     color: #333;
     text-align: center;
-    font: var(--typography8-400);
+    font: var(--typography4-500);
     list-style: none;
   }
 `

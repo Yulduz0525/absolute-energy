@@ -20,9 +20,9 @@ const links = [
 export default function Sidebar({ onClose, open }: Props) {
   useEffect(() => {
     if (open) {
-      document.body.style.overflowY = "hidden";
+      document.body.classList.add('no-scroll');
     } else {
-      document.body.style.overflowY = "scroll";
+      document.body.classList.remove('no-scroll');
     }
   }, [open]);
 
