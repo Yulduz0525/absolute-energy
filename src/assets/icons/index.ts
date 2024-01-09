@@ -195,6 +195,7 @@ import location from "./location";
 import arrowDown from "./arrow-down";
 import callCalling from "./call-calling";
 import sms from "./sms";
+import arrowLeft from "./arrow-left";
 
 const Icons = {
   shoppingCart,
@@ -206,6 +207,7 @@ const Icons = {
   batteryEmpty2,
   batteryEmpty,
   battery2,
+  arrowLeft,
   home,
   addCircle,
   closeCircle,
