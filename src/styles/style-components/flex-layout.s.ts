@@ -40,7 +40,8 @@ export type rowProps = {
   gap?: number;
   direction?: TMediaDirection | TDirection;
   content?: TMediaContent | TContent;
-  items?: TMediaItems | TItems;
+  align_items?: TMediaItems | TItems;
+  align_content?: TMediaItems | TItems;
 };
 export type rowPropsSize = {
   size: number;
@@ -64,7 +65,7 @@ const mediaSizes: {
 const mediaLists: {
   key: TMedia;
   minWidth: string;
-}[] = [ 
+}[] = [
   { key: "xs", minWidth: "0px" },
   { key: "sm", minWidth: "576px" },
   { key: "md", minWidth: "768px" },
