@@ -16,9 +16,9 @@ export const SectionSubTitle = styled.h5`
     &::after {
       content: "";
       position: absolute;
-      left: 0;
-      right: 0;
+      left: 50%;
       bottom: -16px;
+      transform: translateX(-50%);
 
       width: 120px;
       height: 2px;
@@ -46,6 +46,28 @@ export const SectionTitle = styled.h1`
     font-weight: 700;
     line-height: normal;
     letter-spacing: -0.8px;
+    span {
+      background: var(
+        --gradient1,
+        linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 `;
+export const SectionDescription = styled.p`
+  && {
+    color: var(--secondary-500, #0e2824);
+    text-align: center;
 
+    /* Body-1 */
+    font-family: Lexend;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+  }
+`;

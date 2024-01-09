@@ -1,6 +1,13 @@
 import { FC, useState } from "react";
-import { CarouselItem, CarouselList, CarouselWrap } from "./carousel.s";
+import {
+  CarouselBtn,
+  CarouselItem,
+  CarouselList,
+  CarouselTitle,
+  CarouselWrap,
+} from "./carousel.s";
 import mock from "@/mock";
+import Icons from "@/assets/icons";
 
 interface ICarouselProps {}
 
@@ -9,49 +16,43 @@ export const Carousel: FC<ICarouselProps> = (props) => {
   const [portfolios, setPortfolios] = useState(mock.portfolios);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  function scroll(id: number) {
+    setActiveIndex(id);
+    setPortfolios((prev) => {
+      return prev.map((item, index) => {
+        return {
+          ...item,
+          positionId: id >= item.id ? 0 : index - id,
+        };
+      });
+    });
+  }
+
   return (
     <CarouselWrap>
       <CarouselList>
         {portfolios.map((item, index) => (
           <CarouselItem
-          key={index}
-            translate={item.id * itemWidth}
+            key={index}
+            translate={item.positionId * itemWidth}
             collapsed={activeIndex >= index}
+            bg={item.bg}
           >
-            {item.title}
+            <CarouselTitle>{item.title}</CarouselTitle>
+            <CarouselBtn>
+              <Icons.arrowRight.Broken />
+            </CarouselBtn>
           </CarouselItem>
         ))}
       </CarouselList>
       <button
         onClick={() => {
-          portfolios[1].id !== 1 &&
-            setPortfolios((prev) => {
-              return prev.map((item, index) => {
-                return {
-                  ...item,
-                  id: portfolios[index + 1]?.id > 0 ? item.id + 1 : 0,
-                };
-              });
-            });
+          scroll(activeIndex - 1);
         }}
       >
         button -
       </button>
-      <button
-        onClick={() => {
-          portfolios[portfolios.length - 1].id !== 1 &&
-            setPortfolios((prev) => {
-              return prev.map((item, index) => {
-                return {
-                  ...item,
-                  id: index <= activeIndex ? 0 : item.id - 1,
-                };
-              });
-            });
-        }}
-      >
-        button +
-      </button>
+      <button onClick={() => scroll(activeIndex + 1)}>button +</button>
     </CarouselWrap>
   );
 };
