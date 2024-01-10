@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { CloseButton, Content, NavsList, SidebarWrap } from "./sidebar.s";
 import Styles from "@/styles";
 import Icons from "@/assets/icons";
@@ -18,17 +18,35 @@ const links = [
 ];
 
 export default function Sidebar({ onClose, open }: Props) {
+  const contentRef = useRef<null | HTMLDivElement>(null);
+
   useEffect(() => {
     if (open) {
-      document.body.classList.add('no-scroll');
+      document.body.classList.add("no-scroll");
     } else {
-      document.body.classList.remove('no-scroll');
+      document.body.classList.remove("no-scroll");
     }
   }, [open]);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        contentRef.current &&
+        !contentRef.current.contains(event.target as Node)
+      ) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
+
   return (
     <SidebarWrap open={open}>
-      <Content open={open}>
+      <Content ref={contentRef} open={open}>
         <Styles.Column width="100%" content={"space-between"}>
           {/* <Image
             height={48}
@@ -41,7 +59,7 @@ export default function Sidebar({ onClose, open }: Props) {
           </CloseButton>
         </Styles.Column>
         <NavsList>
-          {links.map(({href, text}) => (
+          {links.map(({ href, text }) => (
             <li key={text} onClick={() => onClose()}>
               <Link href={href}>{text}</Link>
             </li>
