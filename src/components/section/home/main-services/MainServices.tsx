@@ -14,11 +14,11 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
   return (
     <MainServicesWrap>
       <Styles.Container>
-        <Styles.Column width="100%" direction="column" items="center" gap={32}>
+        <Styles.Column width="100%" direction="column" align_items="center" gap={32}>
           <Styles.Column
             width="100%"
             direction="column"
-            items="center"
+            align_items="center"
             gap={16}
           >
             <Styles.SectionSubTitle data-aos="fade-up">Main Services</Styles.SectionSubTitle>

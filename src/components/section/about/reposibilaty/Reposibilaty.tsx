@@ -18,7 +18,7 @@ export default function Reposibilaty({}: Props) {
   return (
     <ReposibilatyWrap>
       <Styles.Container>
-        <Styles.Column width="100%" items="center" gap={50}>
+        <Styles.Column width="100%" align_items="center" gap={50}>
           <Styles.Row size={{xs: 12, md: 6}} difference={{ xs: 0, md: 25}} direction={"column"} gap={32}>
             <SectionTitle data-aos="">Наши задачи</SectionTitle>
             <ReponseList>

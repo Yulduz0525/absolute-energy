@@ -19,8 +19,12 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
   return (
     <AboutUsWrap>
       <Styles.Container>
-        <Styles.Column width="100%" items="center" gap={48}>
-          <Styles.Row size={{xs: 12, md: 3}} content={"center"} difference={{xs: 0, md: 24}}>
+        <Styles.Column width="100%" align_items="center" gap={48}>
+          <Styles.Row
+            size={{ xs: 12, md: 3 }}
+            content={"center"}
+            difference={{ xs: 0, md: 24 }}
+          >
             <AboutImgBlock>
               <TeemImage
                 width={430}
@@ -30,31 +34,38 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
               />
             </AboutImgBlock>
           </Styles.Row>
-          <Styles.Row size={{xs: 12, md: 9}} difference={{xs: 0, md: 24}}>
+          <Styles.Row size={{ xs: 12, md: 9 }} difference={{ xs: 0, md: 24 }}>
             <Styles.Column
               width="100%"
               direction="column"
               content="center"
-              items="flex-start"
+              align_items="flex-start"
               gap={32}
             >
               <Styles.Column
                 width="100%"
                 direction="column"
-                items="flex-start"
+                align_items="flex-start"
                 gap={14}
               >
-                <Styles.Column  data-aos="fade-left" direction="column" items="flex-start" gap={12}>
+                <Styles.Column
+                  data-aos="fade-left"
+                  direction="column"
+                  align_items="flex-start"
+                  gap={12}
+                >
                   <SubTitle>About us</SubTitle>
                   <SubTitleLine />
                 </Styles.Column>
                 <Styles.Column
                   width="100%"
                   direction="column"
-                  items="flex-start"
+                  align_items="flex-start"
                 >
-                  <Title data-aos="fade-left" data-aos-delay="300">О компании</Title>
-                  <Description  data-aos="fade-left" data-aos-delay="600">
+                  <Title data-aos="fade-left" data-aos-delay="300">
+                    О компании
+                  </Title>
+                  <Description data-aos="fade-left" data-aos-delay="600">
                     Компания «ABSOLUTE ENERGY» основана в 2016 г. и является
                     официальным дилером торговых марок AKSA, Cummins, RID,
                     GENPOWER и Mitsubishi на территории Республики Узбекистан.
