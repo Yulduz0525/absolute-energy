@@ -121,8 +121,7 @@ export const Row = styled.div<rowProps>`
   && {
     display: flex;
     ${commonStyles}
-
-    ${({ size, difference }) => {
+    ${({ size }) => {
       return typeof size === "object"
         ? Object.keys(size).map((key) => {
             return css<rowPropsSizeMedia>`

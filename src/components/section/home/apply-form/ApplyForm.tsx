@@ -15,7 +15,7 @@ export const ApplyForm: FC<IApplyFormProps> = (props) => {
   return (
     <ApplyFormWrap>
       <Styles.Container>
-        <Styles.Column width="100%" items="center" gap={32}>
+        <Styles.Column width="100%" align_items="center" gap={32}>
           <Styles.Row
             size={{ xs: 12, md: 6, lg: 6 }}
             difference={{ xs: 0, md: 16, lg: 16 }}

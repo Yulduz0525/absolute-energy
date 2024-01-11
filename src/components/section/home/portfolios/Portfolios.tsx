@@ -64,7 +64,7 @@ export const Portfolios: FC<IPortfoliosProps> = ({}) => {
                 </PositionBtn>
                 <PositionBtn
                   onClick={() => {
-                    activeIndex !== portfolios.length - 2 &&
+                    activeIndex !== portfolios.length - 1 &&
                       scroll(activeIndex + 1);
                   }}
                 >

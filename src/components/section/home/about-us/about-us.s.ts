@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const AboutUsWrap = styled.div`
@@ -16,16 +17,51 @@ export const AboutUsWrap = styled.div`
 export const AboutImgBlock = styled.div`
   && {
     width: 100%;
-    max-width: 340px;
+    max-width: 320px;
+    min-width: 320px;
+
     display: flex;
     justify-content: center;
+    position: relative;
+    & > img:nth-child(2) {
+      z-index: 0;
+
+      position: absolute;
+      top: -54px;
+      left: 24px;
+    }
+    & > img:nth-child(3) {
+      z-index: 0;
+
+      position: absolute;
+      top: -8px;
+      right: -40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      bottom: -32px;
+
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: linear-gradient(
+        80deg,
+        #fae6fd 8.96%,
+        rgba(255, 255, 255, 0) 86.17%
+      );
+    }
   }
 `;
 
 export const TeemImage = styled(Image)`
   width: 100%;
   margin: 0 auto;
-`
+  z-index: 9;
+  border-radius: 50%;
+`;
 export const SubTitle = styled.h5`
   color: var(--Black, #000);
 
@@ -65,7 +101,7 @@ export const Description = styled.p`
   font-weight: 400;
   line-height: normal;
 `;
-export const AboutBtn = styled.button`
+export const AboutBtn = styled(Link)`
   && {
     display: flex;
     align-items: center;

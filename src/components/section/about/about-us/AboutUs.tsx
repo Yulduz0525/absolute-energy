@@ -18,7 +18,7 @@ export default function AboutUs({}: Props) {
   return (
     <AboutUsWrap>
       <Styles.Container>
-        <Styles.Column width="100%" items="center" gap={20}>
+        <Styles.Column width="100%" align_items="center" gap={20}>
           <Styles.Row size={{ xs: 12, md: 6 }} difference={{ xs: 0, md: 16 }}>
             <GalleryWrap>
               <WomenImage
@@ -29,7 +29,12 @@ export default function AboutUs({}: Props) {
                 height={220}
                 alt="boss works"
               />
-              <Styles.Column data-aos="fade-up-right" width="100%" items={"stretch"} gap={20}>
+              <Styles.Column
+                data-aos="fade-up-right"
+                width="100%"
+                align_items={"stretch"}
+                gap={20}
+              >
                 <DailyUsers>
                   <span>500K</span>
                   Daily Active Users
@@ -47,7 +52,12 @@ export default function AboutUs({}: Props) {
           </Styles.Row>
           <Styles.Row size={{ xs: 12, md: 6 }} difference={{ xs: 0, md: 16 }}>
             <SectionTitle data-aos="fade-up">О компании</SectionTitle>
-            <Styles.Column data-aos="fade-up" width="100%" direction={"column"} gap={18}>
+            <Styles.Column
+              data-aos="fade-up"
+              width="100%"
+              direction={"column"}
+              gap={18}
+            >
               <SectionDesc>
                 Наша компания успешно реализовала в Узбекистане более 50
                 проектов под ключ с ориентированным на клиента подходом,
