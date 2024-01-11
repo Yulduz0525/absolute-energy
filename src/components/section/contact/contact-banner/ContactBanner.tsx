@@ -17,7 +17,7 @@ export default function ContactBanner({}: Props) {
       <Styles.Container>
         <BannerInner>
           <BannerTitle>Обратная связь</BannerTitle>
-          <Styles.Column items={"center"} gap={32}>
+          <Styles.Column align_items={"center"} gap={32}>
             <BannerDesc>
               contact@technologycal <MailIcon />
             </BannerDesc>
