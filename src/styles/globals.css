@@ -10,6 +10,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: auto;
 
   color: var(--blue-900, #01001f);
   background-color: var(--white, #fff) !important;
@@ -17,6 +18,11 @@ body {
 
   font: var(--typography7-400);
   color: var(--blue-900, #01001f);
+}
+
+body.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 a {
