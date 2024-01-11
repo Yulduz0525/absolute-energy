@@ -15,7 +15,12 @@ export default function Home() {
         <Sections.Banner />
         <Sections.AboutUs />
         <Sections.MainServices />
-        <Sections.Portfolios />
+        <Sections.Portfolios /> {/*  bug. It makes verticol scrollbar at window    */}
+        <Sections.ApplyForm />
+        <Sections.Services />
+        <Sections.ClientSays />
+        <Sections.Partners />
+        <Sections.FAQ />
       </main>
     </>
   );

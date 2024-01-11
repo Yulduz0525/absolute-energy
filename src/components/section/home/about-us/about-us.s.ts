@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 export const AboutUsWrap = styled.div`
@@ -16,9 +17,15 @@ export const AboutImgBlock = styled.div`
   && {
     width: 100%;
     max-width: 340px;
+    display: flex;
+    justify-content: center;
   }
 `;
 
+export const TeemImage = styled(Image)`
+  width: 100%;
+  margin: 0 auto;
+`
 export const SubTitle = styled.h5`
   color: var(--Black, #000);
 
