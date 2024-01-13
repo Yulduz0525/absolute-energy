@@ -52,30 +52,3 @@ export const IconBlock = styled.div<{ id: number }>`
     }
   }
 `;
-export const Title = styled.h5`
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  align-self: stretch;
-
-  overflow: hidden;
-  color: var(--Dark-500, #252f40);
-  text-overflow: ellipsis;
-
-  /* HEADING5 */
-  font-family: Lexend;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-`;
-export const Description = styled.p`
-  color: var(--Dark-500, #252f40);
-
-  /* PARAGRAPH */
-  font-family: Lexend;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-`;

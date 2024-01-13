@@ -1,13 +1,6 @@
 import React, { useState } from "react";
-import {
-  ExpandButton,
-  FAQWrap,
-  Question,
-  QuestionContent,
-  QuestionTitle,
-  SectionTitle,
-} from "./faq.s";
-import Styles from "@/styles";
+import { ExpandButton, FAQWrap, Question } from "./faq.s";
+import Styles, { Typography } from "@/styles";
 import { ChevronDown } from "@/assets/img/chevron-down";
 
 type Props = {};
@@ -50,7 +43,7 @@ export default function FAQ({}: Props) {
     <FAQWrap>
       <Styles.Container>
         <Styles.Column width="100%" direction={"column"} gap={32}>
-          <SectionTitle>“Часто задаваемые вопросы”</SectionTitle>
+          <Styles.SectionTitle>“Часто задаваемые вопросы”</Styles.SectionTitle>
           <FAQColapse questions={questions} />
         </Styles.Column>
       </Styles.Container>
@@ -86,17 +79,14 @@ function FAQColapse({ questions }: { questions: IQuestion[] }) {
   return (
     <Styles.Column width="100%">
       {items.map(({ title, text, expanded, id }, index) => (
-        <Question key={index}>
+        <Question key={index} expanded={expanded}>
           <div className="header" onClick={() => openQesution(id, expanded)}>
-            <QuestionTitle>{title}</QuestionTitle>
-            <ExpandButton
-              expanded={expanded}
-              
-            >
+            <Typography.LEAD_TEXT>{title}</Typography.LEAD_TEXT>
+            <ExpandButton>
               <ChevronDown />
             </ExpandButton>
           </div>
-          <QuestionContent expanded={expanded}>{text}</QuestionContent>
+          <Typography.SMALL>{text}</Typography.SMALL>
         </Question>
       ))}
     </Styles.Column>

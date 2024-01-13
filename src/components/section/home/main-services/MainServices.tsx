@@ -1,11 +1,6 @@
 import { FC } from "react";
-import {
-  Description,
-  IconBlock,
-  MainServicesWrap,
-  Title,
-} from "./main-services.s";
-import Styles from "@/styles";
+import { IconBlock, MainServicesWrap } from "./main-services.s";
+import Styles, { Typography } from "@/styles";
 import mock from "@/mock";
 
 interface IMainServicesProps {}
@@ -14,15 +9,24 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
   return (
     <MainServicesWrap>
       <Styles.Container>
-        <Styles.Column width="100%" direction="column" align_items="center" gap={32}>
+        <Styles.Column
+          width="100%"
+          direction="column"
+          align_items="center"
+          gap={32}
+        >
           <Styles.Column
             width="100%"
             direction="column"
             align_items="center"
             gap={16}
           >
-            <Styles.SectionSubTitle data-aos="fade-up">Main Services</Styles.SectionSubTitle>
-            <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300" >Основные направления</Styles.SectionTitle>
+            <Styles.SectionSubTitle data-aos="fade-up">
+              Main Services
+            </Styles.SectionSubTitle>
+            <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300">
+              Основные направления
+            </Styles.SectionTitle>
           </Styles.Column>
           <Styles.Column width="100%" gap={24}>
             {mock.mainServices.map((mainService, index) => (
@@ -39,8 +43,10 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
                   <mainService.icon />
                 </IconBlock>
                 <Styles.Column width="100%" direction="column" gap={8}>
-                  <Title>{mainService.title}</Title>
-                  <Description>{mainService.description}</Description>
+                  <Typography.H5>{mainService.title}</Typography.H5>
+                  <Typography.PARAGRAPH color="dark200">
+                    {mainService.description}
+                  </Typography.PARAGRAPH>
                 </Styles.Column>
               </Styles.Row>
             ))}

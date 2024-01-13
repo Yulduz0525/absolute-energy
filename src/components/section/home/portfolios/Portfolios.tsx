@@ -1,18 +1,13 @@
 import { FC, useState } from "react";
 import {
-  CarouselBtn,
   CarouselItem,
   CarouselList,
   CarouselTitle,
-  Description,
   InfoBlock,
-  InfoItem,
   PortfoliosWrap,
   PositionBtn,
-  Title,
 } from "./portfolios.s";
-import Styles from "@/styles";
-import { Carousel } from "./components";
+import Styles, { Typography } from "@/styles";
 import Icons from "@/assets/icons";
 import mock from "@/mock";
 
@@ -46,11 +41,15 @@ export const Portfolios: FC<IPortfoliosProps> = ({}) => {
           >
             <InfoBlock>
               <Styles.Column width="100%" direction="column" gap={12}>
-                <Title>{portfolios[activeIndex].title}</Title>
-                <Description>{portfolios[activeIndex].description}</Description>
+                <Typography.H1>{portfolios[activeIndex].title}</Typography.H1>
+                <Typography.H6 color="dark200">
+                  {portfolios[activeIndex].description}
+                </Typography.H6>
                 <Styles.Column width="100%" direction="column">
                   {portfolios[activeIndex].list.map((item) => (
-                    <InfoItem>{item}</InfoItem>
+                    <Typography.PARAGRAPH color="dark300">
+                      {item}
+                    </Typography.PARAGRAPH>
                   ))}
                 </Styles.Column>
               </Styles.Column>
@@ -82,9 +81,6 @@ export const Portfolios: FC<IPortfoliosProps> = ({}) => {
                   bg={item.bg}
                 >
                   <CarouselTitle>{item.title}</CarouselTitle>
-                  {/* <CarouselBtn>
-                    <Icons.arrowRight.Broken />
-                  </CarouselBtn> */}
                 </CarouselItem>
               ))}
             </CarouselList>

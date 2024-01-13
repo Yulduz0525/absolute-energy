@@ -43,24 +43,3 @@ export const ImageCard = styled.div`
     }
   }
 `;
-export const Title = styled.h1`
-  color: var(--Dark-500, #252f40);
-
-  /* HEADING2 */
-  font-family: Lexend;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.8px;
-`;
-export const Description = styled.p`
-  color: var(--Dark-500, #252f40);
-
-  /* LEAD-TEXT */
-  font-family: Lexend;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
