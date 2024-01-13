@@ -3,13 +3,10 @@ import {
   AboutBtn,
   AboutImgBlock,
   AboutUsWrap,
-  Description,
-  SubTitle,
   SubTitleLine,
   TeemImage,
-  Title,
 } from "./about-us.s";
-import Styles from "@/styles";
+import Styles, { Typography } from "@/styles";
 import Image from "next/image";
 import Icons from "@/assets/icons";
 
@@ -66,7 +63,7 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
                 align_items="flex-start"
                 gap={12}
               >
-                <SubTitle>About us</SubTitle>
+                <Typography.H5>About us</Typography.H5>
                 <SubTitleLine />
               </Styles.Column>
               <Styles.Column
@@ -74,10 +71,14 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
                 direction="column"
                 align_items="flex-start"
               >
-                <Title data-aos="fade-left" data-aos-delay="300">
+                <Typography.H1 data-aos="fade-left" data-aos-delay="300">
                   О компании
-                </Title>
-                <Description data-aos="fade-left" data-aos-delay="600">
+                </Typography.H1>
+                <Typography.LEAD_TEXT
+                  color="dark200"
+                  data-aos="fade-left"
+                  data-aos-delay="600"
+                >
                   Компания «ABSOLUTE ENERGY» основана в 2016 г. и является
                   официальным дилером торговых марок AKSA, Cummins, RID,
                   GENPOWER и Mitsubishi на территории Республики Узбекистан. На
@@ -87,7 +88,7 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
                   достаточное количество обученных и сертифицированных сервисных
                   инженеров для оказания гарантийной после гарантийной поддержки
                   оборудования в режиме 24/7
-                </Description>
+                </Typography.LEAD_TEXT>
               </Styles.Column>
             </Styles.Column>
             <AboutBtn href="/about" data-aos="fade-left" data-aos-delay="800">

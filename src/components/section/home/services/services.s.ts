@@ -23,6 +23,13 @@ export const ServicesCard = styled.div<{ active?: boolean }>`
 
     border-radius: 16px;
 
+    h6 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
     ${({ active }) =>
       active
         ? css`
@@ -30,9 +37,8 @@ export const ServicesCard = styled.div<{ active?: boolean }>`
               --gradient1,
               linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
             );
-            h1,
-            p,
-            h3 {
+            h4,
+            h6 {
               color: var(--White, #fff);
             }
             path {
@@ -46,11 +52,7 @@ export const ServicesCard = styled.div<{ active?: boolean }>`
           `
         : css`
             background: var(--White, #fff);
-            h1,
-            p,
-            h3 {
-              color: var(--Black, #000);
-            }
+
             path {
               stroke: var(--Secondary-500, #0094ff);
             }
@@ -62,50 +64,7 @@ export const ServicesCard = styled.div<{ active?: boolean }>`
           `}
   }
 `;
-export const Title = styled.h1`
-  width: 100%;
 
-  text-align: center;
-
-  /* HEADING4 */
-  font-family: Lexend;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -0.8px;
-`;
-export const Description = styled.p`
-  width: 100%;
-
-  text-align: center;
-
-  /* LEAD-TEXT */
-  font-family: Lexend;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
-export const ListItem = styled.h3`
-  && {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-
-    /* PARAGRAPH */
-    font-family: Lexend;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 162.5% */
-
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
-`;
 export const CustomBtn = styled.button`
   && {
     width: 100%;
