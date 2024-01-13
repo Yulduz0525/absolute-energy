@@ -62,16 +62,6 @@ export const TeemImage = styled(Image)`
   z-index: 9;
   border-radius: 50%;
 `;
-export const SubTitle = styled.h5`
-  color: var(--Black, #000);
-
-  /* HEADING5 */
-  font-family: Lexend;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-`;
 export const SubTitleLine = styled.div`
   width: 120px;
   height: 2px;
@@ -79,27 +69,6 @@ export const SubTitleLine = styled.div`
     --gradient-line,
     linear-gradient(90deg, #33a9ff -1.96%, rgba(255, 255, 255, 0) 99.72%)
   );
-`;
-export const Title = styled.h1`
-  color: var(--Black, #000);
-
-  /* HEADING1 */
-  font-family: Lexend;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.8px;
-`;
-export const Description = styled.p`
-  color: var(--Black, #000);
-
-  /* LEAD-TEXT */
-  font-family: Lexend;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 `;
 export const AboutBtn = styled(Link)`
   && {

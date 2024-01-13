@@ -1,18 +1,12 @@
 import React, { FC } from "react";
 import {
   BannerWrap,
-  Description,
-  StatDescription,
   StatLine,
-  StatSubTitle,
-  StatTitle,
   StatisticItem,
   Statistics,
-  SubTitle,
-  Title,
   WaveAnimation,
 } from "./banner.s";
-import Styles from "@/styles";
+import Styles, { Typography } from "@/styles";
 import mock from "@/mock";
 
 export interface IBannerProps {}
@@ -21,17 +15,27 @@ export const Banner: FC<IBannerProps> = (props) => {
   return (
     <BannerWrap>
       <Styles.Container>
-        <SubTitle>Services</SubTitle>
-        <Title>ABSOLUTE ENERGY</Title>
-        <Description>СЕРВИС МЕЖДУНАРОДНОГО КЛАССА</Description>
+        <Typography.H5 color="gradient" align="center">
+          Services
+        </Typography.H5>
+        <Typography.H1 color="white" align="center">
+          ABSOLUTE ENERGY
+        </Typography.H1>
+        <Typography.PARAGRAPH color="white" align="center">
+          СЕРВИС МЕЖДУНАРОДНОГО КЛАССА
+        </Typography.PARAGRAPH>
         <Statistics>
           {mock.bannerStat.map((stat, index) => (
             <>
               <StatisticItem>
-                <StatTitle>{stat.title}</StatTitle>
+                <Typography.H1 color="gradient" align="center">
+                  {stat.title}
+                </Typography.H1>
                 <Styles.Column width="100%" content="center">
-                  <StatSubTitle>{stat.subTitle}</StatSubTitle>
-                  <StatDescription>{stat.description}</StatDescription>
+                  <Typography.H4 align="center">{stat.subTitle}</Typography.H4>
+                  <Typography.PARAGRAPH align="center">
+                    {stat.description}
+                  </Typography.PARAGRAPH>
                 </Styles.Column>
               </StatisticItem>
               {mock.bannerStat.length - 1 !== index && <StatLine />}

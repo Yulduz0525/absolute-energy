@@ -27,42 +27,6 @@ export const BannerWrap = styled.div`
     }
   }
 `;
-export const Title = styled.h1`
-  color: var(--White, #fff);
-  text-align: center;
-
-  /* HEADING1 */
-  font: var(--typography2-700);
-`;
-export const SubTitle = styled.h5`
-  text-align: center;
-
-  /* HEADING5 */
-  font-family: Lexend;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-
-  background: var(
-    --gradient1,
-    linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-export const Description = styled.p`
-  color: var(--White, #fff);
-  text-align: center;
-
-  /* PARAGRAPH */
-  font-family: Lexend;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-`;
 
 export const Statistics = styled.div`
   && {
@@ -101,48 +65,7 @@ export const StatisticItem = styled.div`
     }
   }
 `;
-export const StatTitle = styled.h1`
-  text-align: center;
 
-  /* HEADING1 */
-  font-family: Lexend;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.8px;
-
-  background: var(
-    --gradient1,
-    linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-export const StatSubTitle = styled.h5`
-  color: var(--Dark-500, #252f40);
-  text-align: center;
-
-  /* HEADING4 */
-  font-family: Lexend;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -0.8px;
-`;
-export const StatDescription = styled.p`
-  color: var(--Dark-500, #252f40);
-  text-align: center;
-
-  /* PARAGRAPH */
-  font-family: Lexend;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-`;
 export const StatLine = styled.div`
   width: 2px;
   height: 160px;

@@ -14,6 +14,8 @@ export const ApplyFormWrap = styled.section`
         rgba(36, 43, 51, 0.9) 100%
       ),
       url("/images/apply-form-bg.png"), lightgray 50% / cover no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     & > div {
       padding: 100px;
 
@@ -29,33 +31,6 @@ export const ApplyFormWrap = styled.section`
       }
     }
   }
-`;
-export const Title = styled.h1`
-  /* HEADING2 */
-  font-family: Lexend;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.8px;
-
-  background: var(
-    --gradient1,
-    linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-export const Description = styled.p`
-  color: var(--White, #fff);
-
-  /* PARAGRAPH */
-  font-family: Lexend;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
 `;
 
 export const CustomInput = styled.input`
@@ -77,18 +52,7 @@ export const CustomInput = styled.input`
     line-height: normal;
   }
 `;
-export const FormText = styled.p`
-  width: 100%;
-  color: #e7e7e7;
-  text-align: center;
 
-  /* TINY */
-  font-family: Open Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
 export const FormButton = styled.button`
   display: flex;
   justify-content: center;

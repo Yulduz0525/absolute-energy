@@ -1,15 +1,15 @@
 import { FC } from "react";
-import { ClientSaysWrap, Description, ImageCard, Title } from "./client-says.s";
-import Styles from "@/styles";
+import { ClientSaysWrap, ImageCard } from "./client-says.s";
+import Styles, { Typography } from "@/styles";
 import Image from "next/image";
 import Icons from "@/assets/icons";
-import {Swiper, SwiperSlide} from "swiper/react"
-import {Navigation} from "swiper/modules"
-import "swiper/css"
-import "swiper/css/navigation"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 interface IClientSaysProps {}
-const swiperItems = [1,2,3]
+const swiperItems = [1, 2, 3];
 
 export const ClientSays: FC<IClientSaysProps> = (props) => {
   return (
@@ -19,14 +19,24 @@ export const ClientSays: FC<IClientSaysProps> = (props) => {
           <Styles.SectionTitle data-aos="fade-up">
             Отзывы наших <Styles.Subtext> довольных клиентов</Styles.Subtext>
           </Styles.SectionTitle>
-          <Styles.SectionDescription  data-aos="fade-up" data-aos-delay="300">
+          <Styles.SectionDescription data-aos="fade-up" data-aos-delay="300">
             Several selected clients, who already believe in our service.
           </Styles.SectionDescription>
         </Styles.Column>
-        <Swiper modules={[Navigation]} loop navigation={{nextEl: ".feedback-swiper_next-btn"}} style={{width: "100%"}}>
+        <Swiper
+          modules={[Navigation]}
+          loop
+          navigation={{ nextEl: ".feedback-swiper_next-btn" }}
+          style={{ width: "100%" }}
+        >
           {swiperItems.map((_, index) => (
             <SwiperSlide key={index}>
-              <Styles.Column width="100%" gap={24} direction="row" wrap={"nowrap"}>
+              <Styles.Column
+                width="100%"
+                gap={24}
+                direction="row"
+                wrap={"nowrap"}
+              >
                 <ImageCard>
                   <Image
                     src="/images/trash-img/user-1.png"
@@ -47,13 +57,14 @@ export const ClientSays: FC<IClientSaysProps> = (props) => {
                   align_content="center"
                   gap={16}
                 >
-                  <Title>Matthew Paul</Title>
-                  <Description>
-                    Perfect, very good job! Thank you for the amazing design and work.
-                    Really impressed with the high quality and quick turnaround time.
-                    Highly recommend.
-                  </Description>
-                  <Styles.Column className="feedback-swiper_next-btn">
+                  <Typography.H2>Matthew Paul</Typography.H2>
+                  <Typography.LEAD_TEXT>
+                    Perfect, very good job! Thank you for the amazing design and
+                    work. Really impressed with the high quality and quick
+                    turnaround time. Highly recommend.
+                  </Typography.LEAD_TEXT>
+                  <Styles.Column className="feedback-swiper_next-btn" gap={16}>
+                    <Icons.arrowLeft.Broken />
                     <Icons.arrowRight.Broken />
                   </Styles.Column>
                 </Styles.Column>

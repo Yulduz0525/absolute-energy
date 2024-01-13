@@ -1,0 +1,127 @@
+import styled, { css } from "styled-components";
+import { colors, TColors } from "@/constants";
+
+export type TTypographyProps = {
+  color?: TColors;
+  align?: "center" | "end" | "justify" | "left" | "right" | "start";
+};
+
+const colorStyle = css<TTypographyProps>`
+  ${({ color }) => {
+    return color === "gradient"
+      ? css`
+          background: ${colors[color]};
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        `
+      : css`
+          color: ${color ? colors[color] : "var(--dark-500, #252F40)"};
+        `;
+  }}
+  ${({ align }) =>
+    align &&
+    css`
+      text-align: ${align};
+    `}
+    font-family: Montserrat;
+  font-style: normal;
+  line-height: normal;
+`;
+
+export const H1 = styled.h1<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* HEADING1 */
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+  }
+`;
+export const H2 = styled.h2<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* HEADING2 */
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+  }
+`;
+export const H3 = styled.h3<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* HEADING3 */
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+  }
+`; //DSDSD
+export const H4 = styled.h4<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* HEADING4 */
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+  }
+`;
+export const H5 = styled.h5<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* HEADING5 */
+    font-size: 20px;
+    font-weight: 600;
+  }
+`;
+
+export const H6 = styled.h6<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* HEADING6 */
+    font-size: 16px;
+    font-weight: 600;
+  }
+`;
+export const PARAGRAPH = styled.h6<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* PARAGRAPH */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+`;
+export const LEAD_TEXT = styled.h6<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* LEAD-TEXT */
+    font-size: 20px;
+    font-weight: 400;
+  }
+`;
+export const SMALL = styled.h6<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* SMALL */
+    font-size: 14px;
+    font-weight: 400;
+  }
+`;
+export const TINY = styled.h6<TTypographyProps>`
+  && {
+    ${colorStyle}
+
+    /* TINY */
+    font-size: 12px;
+    font-weight: 400;
+  }
+`;
