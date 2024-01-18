@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BannerWrap = styled.div`
   && {
     width: 100%;
-    padding: 0 100px;
+    padding: 0 0;
     height: 720px;
     background-image: url("images/banner-bg.png");
     background-repeat: no-repeat;

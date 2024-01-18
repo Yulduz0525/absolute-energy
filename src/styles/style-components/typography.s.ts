@@ -4,11 +4,32 @@ import { colors, TColors } from "@/constants";
 export type TTypographyProps = {
   color?: TColors;
   align?: "center" | "end" | "justify" | "left" | "right" | "start";
+  spanColor?: TColors;
 };
 
-const colorStyle = css<TTypographyProps>`
+const spanColorStyle = css<TTypographyProps>`
+  && {
+    span {
+      ${({ spanColor }) => {
+        return spanColor?.substring(0, 8) === "gradient"
+          ? css`
+              background: ${colors[spanColor]};
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            `
+          : css`
+              color: ${spanColor
+                ? colors[spanColor]
+                : "var(--dark-500, #252F40)"};
+            `;
+      }}
+    }
+  }
+`;
+const globalStyle = css<TTypographyProps>`
   ${({ color }) => {
-    return color === "gradient"
+    return color?.substring(0, 8) === "gradient"
       ? css`
           background: ${colors[color]};
           background-clip: text;
@@ -24,14 +45,15 @@ const colorStyle = css<TTypographyProps>`
     css`
       text-align: ${align};
     `}
-    font-family: Montserrat;
+  ${({ spanColor }) => spanColor && spanColorStyle}
+  font-family: Montserrat;
   font-style: normal;
   line-height: normal;
 `;
 
 export const H1 = styled.h1<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* HEADING1 */
     font-size: 48px;
@@ -41,7 +63,7 @@ export const H1 = styled.h1<TTypographyProps>`
 `;
 export const H2 = styled.h2<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* HEADING2 */
     font-size: 36px;
@@ -51,7 +73,7 @@ export const H2 = styled.h2<TTypographyProps>`
 `;
 export const H3 = styled.h3<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* HEADING3 */
     font-size: 30px;
@@ -61,7 +83,7 @@ export const H3 = styled.h3<TTypographyProps>`
 `; //DSDSD
 export const H4 = styled.h4<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* HEADING4 */
     font-size: 24px;
@@ -71,7 +93,7 @@ export const H4 = styled.h4<TTypographyProps>`
 `;
 export const H5 = styled.h5<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* HEADING5 */
     font-size: 20px;
@@ -81,7 +103,7 @@ export const H5 = styled.h5<TTypographyProps>`
 
 export const H6 = styled.h6<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* HEADING6 */
     font-size: 16px;
@@ -90,7 +112,7 @@ export const H6 = styled.h6<TTypographyProps>`
 `;
 export const PARAGRAPH = styled.h6<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* PARAGRAPH */
     font-size: 16px;
@@ -100,7 +122,7 @@ export const PARAGRAPH = styled.h6<TTypographyProps>`
 `;
 export const LEAD_TEXT = styled.h6<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* LEAD-TEXT */
     font-size: 20px;
@@ -109,7 +131,7 @@ export const LEAD_TEXT = styled.h6<TTypographyProps>`
 `;
 export const SMALL = styled.h6<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* SMALL */
     font-size: 14px;
@@ -118,7 +140,7 @@ export const SMALL = styled.h6<TTypographyProps>`
 `;
 export const TINY = styled.h6<TTypographyProps>`
   && {
-    ${colorStyle}
+    ${globalStyle}
 
     /* TINY */
     font-size: 12px;

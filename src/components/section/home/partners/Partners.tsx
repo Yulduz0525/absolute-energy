@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { PartnersWrap, Title } from "./partners.s";
+import { PartnersWrap } from "./partners.s";
 import Styles, { Typography } from "@/styles";
 import Image from "next/image";
 
