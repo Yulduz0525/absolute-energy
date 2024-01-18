@@ -79,7 +79,7 @@ export const AboutBtn = styled(Link)`
     color: var(--Secondary-500, #0094ff);
 
     /* PARAGRAPH */
-    font-family: Lexend;
+    font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

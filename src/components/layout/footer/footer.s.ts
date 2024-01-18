@@ -44,33 +44,18 @@ export const DividingLine = styled.div`
   background-color: var(--white, #fff);
 `;
 
-export const ListTitle = styled.h1`
-  color: var(--white, #fff);
-  font-family: Lexend;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-`;
 export const ListItem = styled(Link)<{ href: string }>`
   && {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
     svg {
       width: 24px;
       min-width: 24px;
       height: 24px;
       path {
-        stroke: var(--white, #fff);
+        stroke: #fff;
       }
     }
-
-    color: var(--white, #fff);
-    font-family: Lexend;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
   }
 `;

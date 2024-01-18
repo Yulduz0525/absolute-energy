@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { CloseButton, Content, NavsList, SidebarWrap } from "./sidebar.s";
-import Styles from "@/styles";
+import Styles, { Typography } from "@/styles";
 import Icons from "@/assets/icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,20 +48,27 @@ export default function Sidebar({ onClose, open }: Props) {
     <SidebarWrap open={open}>
       <Content ref={contentRef} open={open}>
         <Styles.Column width="100%" content={"space-between"}>
-          {/* <Image
-            height={48}
-            width={48}
-            src="/images/Logo.png"
-            alt="Brand logo"
-          /> */}
+          <Link href="/">
+            <Styles.Column align_items="center" gap={8}>
+              <Image
+                height={28}
+                width={28}
+                src="/images/Logo.png"
+                alt="Brand logo"
+              />
+              <Typography.H6 color="gradient">ABSOLUTE ENERGY</Typography.H6>
+            </Styles.Column>
+          </Link>
           <CloseButton onClick={onClose}>
-            <Icons.closeCircle.Linear />
+            <Icons.closeCircle.Linear width={20} height={20} />
           </CloseButton>
         </Styles.Column>
         <NavsList>
           {links.map(({ href, text }) => (
             <li key={text} onClick={() => onClose()}>
-              <Link href={href}>{text}</Link>
+              <Link href={href}>
+                <Typography.H6 color="dark500">{text}</Typography.H6>
+              </Link>
             </li>
           ))}
         </NavsList>
