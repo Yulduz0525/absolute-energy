@@ -22,29 +22,7 @@ export const NavbarWrap = styled.nav`
 
       /* Navbar */
       box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.16);
-      & > a {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-
-        text-align: center;
-
-        /* H5 - 20px/SemiBold */
-        font-family: Lexend;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-
-        background: var(
-          --gradient1,
-          linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
-    }
   }
 `;
 
@@ -54,7 +32,7 @@ export const LogoLink = styled(Link)`
   a {
     display: none !important;
   }
-`
+`;
 export const NavList = styled.ul`
   display: flex;
   justify-content: center;
@@ -62,14 +40,14 @@ export const NavList = styled.ul`
 
   @media (max-width: 768px) {
     display: none;
-   }
+  }
 `;
 
 export const MenuButton = styled.button`
   width: fit-content;
   outline-width: 0;
   border: none;
-  
+
   svg {
     width: 35px;
     height: 35px;
@@ -82,7 +60,7 @@ export const MenuButton = styled.button`
   path {
     stroke: #222;
   }
-`
+`;
 export const NavItem = styled.li`
   && {
     list-style: none;
@@ -94,15 +72,6 @@ export const NavItem = styled.li`
       gap: 12px;
       padding: 12px 20px;
       transition: all ease-in-out 250ms;
-
-      color: var(--Dark-500, #252f40);
-
-      /* HEADING6 */
-      font-family: Lexend;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
     }
 
     @media (max-width: 768px) {

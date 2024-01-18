@@ -6,7 +6,7 @@ export const SectionSubTitle = styled.h5`
     text-align: center;
 
     /* LEAD-TEXT */
-    font-family: Lexend;
+    font-family: Montserrat;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -40,7 +40,7 @@ export const SectionTitle = styled.h1`
     text-align: center;
 
     /* HEADING1 */
-    font-family: Lexend;
+    font-family: Montserrat;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -63,7 +63,7 @@ export const SectionDescription = styled.p`
     text-align: center;
 
     /* Body-1 */
-    font-family: Lexend;
+    font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

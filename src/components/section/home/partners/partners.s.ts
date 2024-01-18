@@ -13,14 +13,3 @@ export const PartnersWrap = styled.section`
     }
   }
 `;
-export const Title = styled.h1`
-  color: #031745;
-  text-align: center;
-
-  /* HEADING5 */
-  font-family: Lexend;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-`;

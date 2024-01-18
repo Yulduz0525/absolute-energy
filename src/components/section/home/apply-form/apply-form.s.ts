@@ -71,7 +71,7 @@ export const FormButton = styled.button`
   text-align: center;
 
   /* PARAGRAPH */
-  font-family: Lexend;
+  font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

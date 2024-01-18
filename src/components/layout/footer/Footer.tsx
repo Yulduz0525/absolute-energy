@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { DividingLine, FooterWrap, ListItem, ListTitle } from "./footer.s";
-import Styles from "@/styles";
+import { DividingLine, FooterWrap, ListItem } from "./footer.s";
+import Styles, { Typography } from "@/styles";
 import Link from "next/link";
 import Image from "next/image";
 import mock from "@/mock";
@@ -8,17 +8,20 @@ import mock from "@/mock";
 interface IFooterProps {}
 
 export const Footer: FC<IFooterProps> = ({}) => {
+  
   return (
     <FooterWrap>
       <Styles.Container>
         <Link href="/">
-          <Image
-            height={48}
-            width={48}
-            src="/images/Logo.png"
-            alt="Brand logo"
-          />
-          ABSOLUTE ENERGY
+          <Styles.Column align_items="center" gap={12}>
+            <Image
+              height={48}
+              width={48}
+              src="/images/Logo.png"
+              alt="Brand logo"
+            />
+            <Typography.H5 color="gradient">ABSOLUTE ENERGY</Typography.H5>
+          </Styles.Column>
         </Link>
         <DividingLine />
         <Styles.Column width="100%" gap={{ xs: 24, sm: 16 }}>
@@ -31,11 +34,16 @@ export const Footer: FC<IFooterProps> = ({}) => {
               gap={20}
               style={{ alignContent: "flex-start" }}
             >
-              <ListTitle>{mock.navFooter.contactsTitle}</ListTitle>
+              <Typography.H5 color="white">
+                {mock.navFooter.contactsTitle}
+              </Typography.H5>
               <Styles.Column width="100%" gap={16}>
                 {mock.navFooter.contacts.map((contact) => (
                   <ListItem href={contact.href}>
-                    <contact.icon /> {contact.label}
+                    <contact.icon />
+                    <Typography.PARAGRAPH color="white">
+                      {contact.label}
+                    </Typography.PARAGRAPH>
                   </ListItem>
                 ))}
               </Styles.Column>
@@ -52,10 +60,14 @@ export const Footer: FC<IFooterProps> = ({}) => {
                 gap={20}
                 style={{ alignContent: "flex-start" }}
               >
-                <ListTitle>{navigation.title}</ListTitle>
+                <Typography.H5 color="white">{navigation.title}</Typography.H5>
                 <Styles.Column width="100%" gap={16} direction="column">
                   {navigation.links.map((nav) => (
-                    <ListItem href={nav.href}>{nav.label}</ListItem>
+                    <ListItem href={nav.href}>
+                      <Typography.PARAGRAPH color="white">
+                        {nav.label}
+                      </Typography.PARAGRAPH>
+                    </ListItem>
                   ))}
                 </Styles.Column>
               </Styles.Column>

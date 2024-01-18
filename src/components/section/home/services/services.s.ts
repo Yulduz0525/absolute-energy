@@ -77,7 +77,7 @@ export const CustomBtn = styled.button`
     gap: 16px;
 
     /* HEADING5 */
-    font-family: Lexend;
+    font-family: Montserrat;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
