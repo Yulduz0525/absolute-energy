@@ -10,6 +10,15 @@ export const MainServicesWrap = styled.div`
       align-items: center;
       gap: 32px;
     }
+    h6 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      align-self: stretch;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 `;
 export const IconBlock = styled.div<{ id: number }>`

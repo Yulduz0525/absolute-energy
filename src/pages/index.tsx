@@ -17,9 +17,9 @@ export default function Home() {
         <Sections.AboutUs />
         <Sections.MainServices />
         <Sections.Portfolios />
-        <Sections.ApplyForm />
+        {/* <Sections.ApplyForm /> */}
         {/* <Sections.Services /> */}
-        <Sections.ClientSays />
+        {/* <Sections.ClientSays /> */}
         <Sections.Partners />
         <Sections.FAQ />
       </main>

@@ -1,11 +1,14 @@
 import React from "react";
 import Components from "@/components";
 import Head from "next/head";
+import components from "@/components";
 
 type Props = {};
 
 export default function Contact({}: Props) {
   const Sections = Components.section.contact;
+  const commonComp = components.common;
+
   return (
     <>
       <Head>
@@ -15,7 +18,11 @@ export default function Contact({}: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Sections.ContactBanner />
+        <commonComp.PageHeader
+          title="Contact Us"
+          description="Информация о нашей компании, нашей деятельности и услуг"
+        />
+        <Sections.ContactInfo />
         <Sections.ContactForm />
       </main>
     </>

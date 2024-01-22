@@ -2,6 +2,7 @@ import { FC } from "react";
 import { IconBlock, MainServicesWrap } from "./main-services.s";
 import Styles, { Typography } from "@/styles";
 import mock from "@/mock";
+import Link from "next/link";
 
 interface IMainServicesProps {}
 
@@ -28,6 +29,7 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
               Основные направления
             </Styles.SectionTitle>
           </Styles.Column>
+
           <Styles.Column width="100%" gap={24}>
             {mock.mainServices.map((mainService, index) => (
               <Styles.Row
@@ -48,6 +50,11 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
                     {mainService.description}
                   </Typography.PARAGRAPH>
                 </Styles.Column>
+                <Link href="/services">
+                  <Typography.H6 color="secondary500">
+                    Узнать больше
+                  </Typography.H6>
+                </Link>
               </Styles.Row>
             ))}
           </Styles.Column>

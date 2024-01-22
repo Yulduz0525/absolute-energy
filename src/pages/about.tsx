@@ -1,12 +1,13 @@
 import React from "react";
 import Sections from "@/components/section";
 import Head from "next/head";
-
-const about = Sections.about;
+import components from "@/components";
 
 type Props = {};
 
 export default function About({}: Props) {
+  const about = Sections.about;
+  const commonComp = components.common;
   return (
     <>
       <Head>
@@ -16,7 +17,11 @@ export default function About({}: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <about.Banner />
+        {/* <about.Banner /> */}
+        <commonComp.PageHeader
+          title="О НАС"
+          description="Информация о нашей компании, нашей деятельности и услуг"
+        />
         <about.AboutUs />
         <about.Reposibilaty />
         <about.FAQ />

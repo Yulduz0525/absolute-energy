@@ -1,28 +1,40 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
-export const NavbarWrap = styled.nav`
+export const NavbarWrap = styled.nav<{ main: boolean }>`
   && {
     width: 100%;
-    position: fixed;
-    top: 20px;
-    left: 0;
-    right: 0;
-
     z-index: 10;
-    & > div {
-      padding: 8px 16px;
 
+    & > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
 
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.8);
+    ${({ main }) =>
+      main
+        ? css`
+            position: fixed;
+            top: 20px;
+            left: 0;
+            right: 0;
 
-      /* Navbar */
-      box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.16);
-      }
+            & > div {
+              padding: 8px 16px;
+
+              border-radius: 24px;
+              background: rgba(255, 255, 255, 0.8);
+
+              /* Navbar */
+              box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.16);
+            }
+          `
+        : css`
+            & > div {
+              padding: 16px 0;
+            }
+          `}
   }
 `;
 
