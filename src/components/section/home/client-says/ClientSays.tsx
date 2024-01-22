@@ -2,7 +2,6 @@ import { FC } from "react";
 import { ClientSaysWrap, ImageCard } from "./client-says.s";
 import Styles, { Typography } from "@/styles";
 import Image from "next/image";
-import Icons from "@/assets/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -63,10 +62,6 @@ export const ClientSays: FC<IClientSaysProps> = (props) => {
                     work. Really impressed with the high quality and quick
                     turnaround time. Highly recommend.
                   </Typography.LEAD_TEXT>
-                  <Styles.Column className="feedback-swiper_next-btn" gap={16}>
-                    <Icons.arrowLeft.Broken />
-                    <Icons.arrowRight.Broken />
-                  </Styles.Column>
                 </Styles.Column>
               </Styles.Column>
             </SwiperSlide>
