@@ -1,9 +1,8 @@
-import { ContactBanner } from "./contact-banner";
 import { ContactForm } from "./contact-form";
-
+import { ContactInfo } from "./contact-info";
 const sections = {
-  ContactBanner,
   ContactForm,
-}
+  ContactInfo,
+};
 
 export default sections;

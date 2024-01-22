@@ -8,19 +8,34 @@ export const ContactFormWrap = styled.form`
     & > div {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 50px;
     }
   }
 `;
 
 export const FormInput = styled.input`
-  height: 80px;
-  border-radius: 20px;
-  border: 1px solid #dcdcdc;
-  padding: 0 16px;
-  background: #fff;
+  padding: 24px 32px;
   width: 100%;
-  font: var(--typography7-400);
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+
+  border-radius: var(--main-border);
+  border: 1px solid var(--dark-100, #bbbfc4);
+  background: var(--White, #fff);
+
+  color: var(--dark-100, #bbbfc4);
+
+  /* LEAD-TEXT */
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `;
 
 export const FormItem = styled.label`
@@ -29,34 +44,55 @@ export const FormItem = styled.label`
   span {
     margin-bottom: 12px;
     display: block;
-    font: var(--typography6-400);
-    color: #242331;
+    color: var(--dark-500, #252f40);
+
+    /* HEADING5 */
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 `;
 
 export const MessageArea = styled.textarea`
+  padding: 24px 32px;
   width: 100%;
-  border-radius: 20px;
-  border: 1px solid #dcdcdc;
-  padding: 16px;
-  background: #fff;
-  font: var(--typography7-400);
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+
+  border-radius: var(--main-border);
+  border: 1px solid var(--dark-100, #bbbfc4);
+  background: var(--White, #fff);
+
+  color: var(--dark-100, #bbbfc4);
+
+  /* LEAD-TEXT */
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
   height: 350px;
-  resize: none;
 `;
 
 export const FormButton = styled.button`
+  padding: 20px 48px;
+  border-radius: 50px;
+  background: var(--Black, #000);
+
   display: flex;
-  width: 228px;
-  padding: 25px 38px 26px 38px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 50px;
-  background: #2f2f2f;
-  color: #fff;
+
+  color: var(--White, #fff);
   text-align: center;
-  font-family: Open Sans;
+  font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
