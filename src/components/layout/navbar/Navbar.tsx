@@ -6,14 +6,20 @@ import Styles, { Typography } from "@/styles";
 import mock from "@/mock";
 import { Sidebar } from "../sidebar";
 import Icons from "@/assets/icons";
+import { useRouter } from "next/router";
 
 interface INavbarProps {}
 
 export const Navbar: FC<INavbarProps> = ({}) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { pathname } = useRouter();
+
+  console.log(pathname);
+
   return (
     <>
-      <NavbarWrap>
+      <NavbarWrap main={pathname === "/"}>
         <Styles.Container>
           <Link href="/">
             <Styles.Column align_items="center" gap={12}>

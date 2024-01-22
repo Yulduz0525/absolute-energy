@@ -9,6 +9,7 @@ export const LayoutWrap = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 72px;
     & > main {
       width: 100%;
 

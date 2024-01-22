@@ -99,7 +99,7 @@ export const CarouselItem = styled.div<{
           `}
   }
 `;
-export const CarouselTitle = styled(Typography.H4)`
+export const CarouselTitle = styled(Typography.H5)`
   && {
     padding: 32px 16px;
     border-radius: 12px;
