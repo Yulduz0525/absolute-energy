@@ -11,13 +11,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main>
         <Sections.Banner />
         <Sections.AboutUs />
         <Sections.MainServices />
-        <Sections.Portfolios /> {/*  bug. It makes verticol scrollbar at window    */}
+        <Sections.Portfolios />
         <Sections.ApplyForm />
-        <Sections.Services />
+        {/* <Sections.Services /> */}
         <Sections.ClientSays />
         <Sections.Partners />
         <Sections.FAQ />
