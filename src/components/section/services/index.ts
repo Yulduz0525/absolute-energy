@@ -1,8 +1,9 @@
 import { Portfolio } from "./portfolio";
 import { ServicesList } from "./services-list";
+
 const sections = {
-  ServicesList,
   Portfolio,
+  ServicesList,
 };
 
 export default sections;

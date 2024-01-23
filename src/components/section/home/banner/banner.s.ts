@@ -4,7 +4,7 @@ export const BannerWrap = styled.div`
   && {
     width: 100%;
     padding: 0 0;
-    height: 720px;
+    height: 90vh;
     background-image: url("images/banner-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,7 +47,7 @@ export const Statistics = styled.div`
     z-index: 9;
 
     @media (max-width: 768px) {
-      /* flex-direction: column; */
+      flex-direction: column;
     }
   }
 `;
@@ -67,15 +67,27 @@ export const StatisticItem = styled.div`
 `;
 
 export const StatLine = styled.div`
-  width: 2px;
-  height: 160px;
+  width: 90%;
+  max-width: 260px;
+  height: 2px;
 
   background: linear-gradient(
-    0deg,
+    90deg,
     rgba(37, 47, 64, 0) 0%,
     #515966 49.48%,
     rgba(37, 47, 64, 0) 100%
   );
+
+  @media (min-width: 768px) {
+    width: 2px;
+    height: 160px;
+    background: linear-gradient(
+      0deg,
+      rgba(37, 47, 64, 0) 0%,
+      #515966 49.48%,
+      rgba(37, 47, 64, 0) 100%
+    );
+  }
 `;
 
 export const WaveAnimation = styled.div`

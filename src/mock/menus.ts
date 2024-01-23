@@ -1,6 +1,6 @@
 export const navItems = [
+  { text: "Главная", url: "/" },
   { text: "О компании", url: "/about" },
-  { text: "Наши услуги", url: "/" },
-  { text: "Наши проекты", url: "/" },
-  { text: "Наши партнёры", url: "/" },
+  { text: "Наши услуги", url: "/services" },
+  { text: "Контакт", url: "/contact" },
 ];
