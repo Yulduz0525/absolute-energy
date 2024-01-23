@@ -7,7 +7,7 @@ import { MainServices } from "./main-services";
 import { Partners } from "./partners";
 import { Portfolios } from "./portfolios";
 import { Services } from "./services";
-
+import { Statistics } from "./statistics";
 const section = {
   Banner,
   AboutUs,
@@ -17,6 +17,7 @@ const section = {
   Services,
   ClientSays,
   Partners,
+  Statistics,
   FAQ,
 };
 

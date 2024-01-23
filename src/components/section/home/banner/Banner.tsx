@@ -24,14 +24,15 @@ export const Banner: FC<IBannerProps> = (props) => {
         <Typography.PARAGRAPH color="white" align="center">
           СЕРВИС МЕЖДУНАРОДНОГО КЛАССА
         </Typography.PARAGRAPH>
-        <Statistics>
+
+        {/* <Statistics>
           {mock.bannerStat.map((stat, index) => (
             <>
               <StatisticItem>
                 <Typography.H1 color="gradient" align="center">
                   {stat.title}
                 </Typography.H1>
-                <Styles.Column width="100%" content="center">
+                <Styles.Column width="100%" direction="column" content="center">
                   <Typography.H4 align="center">{stat.subTitle}</Typography.H4>
                   <Typography.PARAGRAPH align="center">
                     {stat.description}
@@ -41,7 +42,7 @@ export const Banner: FC<IBannerProps> = (props) => {
               {mock.bannerStat.length - 1 !== index && <StatLine />}
             </>
           ))}
-        </Statistics>
+        </Statistics> */}
       </Styles.Container>
       <WaveAnimation>
         <div>
