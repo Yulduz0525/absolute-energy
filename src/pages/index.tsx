@@ -14,6 +14,7 @@ export default function Home() {
 
       <main>
         <Sections.Banner />
+        <Sections.Statistics />
         <Sections.AboutUs />
         <Sections.MainServices />
         <Sections.Portfolios />

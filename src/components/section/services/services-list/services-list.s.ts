@@ -58,3 +58,23 @@ export const ServicesButton = styled.button`
     line-height: normal;
   }
 `;
+export const ServicesHtml = styled.div`
+  && {
+    color: var(--dark-500, #252f40);
+    p {
+      /* SMALL */
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    strong {
+      font-weight: 700;
+    }
+    a {
+      cursor: pointer;
+      color: var(--secondary-500, #0094ff);
+    }
+  }
+`;

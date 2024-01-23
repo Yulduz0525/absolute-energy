@@ -9,14 +9,14 @@ export const LayoutWrap = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 72px;
+    gap: 56px;
     & > main {
       width: 100%;
 
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 72px;
+      gap: 56px;
     }
   }
 `;

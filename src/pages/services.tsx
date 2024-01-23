@@ -1,7 +1,7 @@
 import components from "@/components";
 import Head from "next/head";
 
-export default function Home() {
+export default function Services() {
   const commonComp = components.common;
   const sections = components.section.services;
   return (

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const MainServicesWrap = styled.div`
   && {
@@ -21,10 +21,18 @@ export const MainServicesWrap = styled.div`
     }
   }
 `;
-export const IconBlock = styled.div<{ id: number }>`
+export const IconBlock = styled.div<{ id: number; modal?: boolean }>`
   && {
-    width: 64px;
-    height: 64px;
+    ${({ modal }) =>
+      modal
+        ? css`
+            width: 100px;
+            height: 100px;
+          `
+        : css`
+            width: 64px;
+            height: 64px;
+          `}
     border-radius: 50%;
     position: relative;
 
