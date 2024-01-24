@@ -4,9 +4,9 @@ import Image from "next/image";
 import { LogoLink, MenuButton, NavItem, NavList, NavbarWrap } from "./navbar.s";
 import Styles, { Typography } from "@/styles";
 import mock from "@/mock";
-import { Sidebar } from "../sidebar";
 import Icons from "@/assets/icons";
 import { useRouter } from "next/router";
+import { Sidebar } from "../sidebar";
 
 interface INavbarProps {}
 
@@ -22,7 +22,7 @@ export const Navbar: FC<INavbarProps> = ({}) => {
       <NavbarWrap main={pathname === "/"}>
         <Styles.Container>
           <Link href="/">
-            <Styles.Column align_items="center" gap={12}>
+            <LogoLink href="/">
               <Image
                 height={48}
                 width={48}
@@ -30,7 +30,7 @@ export const Navbar: FC<INavbarProps> = ({}) => {
                 alt="Brand logo"
               />
               <Typography.H5 color="gradient">ABSOLUTE ENERGY</Typography.H5>
-            </Styles.Column>
+            </LogoLink>
           </Link>
           <NavList>
             {mock.navItems.map(({ text, url }, index) => (

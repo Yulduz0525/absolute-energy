@@ -1,17 +1,19 @@
 export const bannerStat = [
   {
-    title: "75+",
-    subTitle: "Lorem ipsum",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    title: "200+",
+    subTitle: "Построили генераторов",
+    description:
+      "Наша компание успешно поставила и построила более 200 генераторов за все время обслуживании",
   },
   {
-    title: "15+",
-    subTitle: "Lorem ipsum",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    title: "1000+",
+    subTitle: "Обслужили",
+    description:
+      "Наши специалисты обслужили более 1000 генераторов за все время",
   },
   {
-    title: "4+",
-    subTitle: "Lorem ipsum",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    title: "10+",
+    subTitle: "10 лет опыт",
+    description: "Мы очень тщательно подходим под каждую задачу",
   },
 ];

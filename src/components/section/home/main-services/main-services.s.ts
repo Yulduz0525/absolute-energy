@@ -10,15 +10,6 @@ export const MainServicesWrap = styled.div`
       align-items: center;
       gap: 32px;
     }
-    h6 {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-      align-self: stretch;
-
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
   }
 `;
 export const IconBlock = styled.div<{ id: number; modal?: boolean }>`
@@ -66,6 +57,30 @@ export const IconBlock = styled.div<{ id: number; modal?: boolean }>`
             ? `var(--Primary-500, #cd02ee)`
             : `var(--Secondary-500, #0094FF)`};
       }
+    }
+  }
+`;
+
+export const MainServicesItem = styled.div`
+  && {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    & > div > h6 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      align-self: stretch;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    & > h6 {
+      cursor: pointer;
     }
   }
 `;

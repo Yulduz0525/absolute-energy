@@ -1,5 +1,9 @@
 import { FC, ReactNode, useState } from "react";
-import { IconBlock, MainServicesWrap } from "./main-services.s";
+import {
+  IconBlock,
+  MainServicesItem,
+  MainServicesWrap,
+} from "./main-services.s";
 import Styles, { Typography } from "@/styles";
 import mock from "@/mock";
 import Link from "next/link";
@@ -22,7 +26,6 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
     title: null,
     description: null,
   });
-
 
   return (
     <MainServicesWrap>
@@ -50,16 +53,14 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
           <Styles.Column width="100%" gap={24}>
             {mock.mainServices.map((mainService, index) => {
               return (
-                <>
-                  <Styles.Row
-                    data-aos="fade-up"
-                    data-aos-delay={index * 300 + ""}
-                    key={index}
-                    size={{ xs: 12, sm: 6, lg: 4 }}
-                    difference={{ xs: 0, sm: 12, lg: 16 }}
-                    gap={16}
-                    direction="column"
-                  >
+                <Styles.Row
+                  data-aos="fade-up"
+                  data-aos-delay={index * 300 + ""}
+                  key={index}
+                  size={{ xs: 12, sm: 6, lg: 4 }}
+                  difference={{ xs: 0, sm: 12, lg: 16 }}
+                >
+                  <MainServicesItem>
                     <IconBlock id={index}>
                       <mainService.icon />
                     </IconBlock>
@@ -83,8 +84,8 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
                     >
                       Узнать больше
                     </Typography.H6>
-                  </Styles.Row>
-                </>
+                  </MainServicesItem>
+                </Styles.Row>
               );
             })}
           </Styles.Column>
