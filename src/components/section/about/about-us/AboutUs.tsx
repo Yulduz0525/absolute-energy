@@ -1,91 +1,107 @@
 import React from "react";
-import {
-  AboutUsWrap,
-  DailyUsers,
-  GalleryWrap,
-  SectionDesc,
-  TeemImage,
-  WomenImage,
-} from "./about-us";
-import Styles from "@/styles";
-import { SectionTitle } from "@/styles/common";
+import { AboutUsWrap, DailyUsers, ReposibilatyText } from "./about-us.s";
+import Styles, { Typography } from "@/styles";
 import Image from "next/image";
-import women_works from "@/assets/img/women_works.png";
-import teem_works from "@/assets/img/teem_work.png";
 type Props = {};
 
 export default function AboutUs({}: Props) {
+  const desc = `<p>
+  Наша компания успешно реализовала в Узбекистане более 50
+  проектов под ключ с ориентированным на клиента подходом,
+  инженерными решениями и оптимальными проектными возможностями с
+  проектированием, поставкой, установкой и после продажным
+  обслуживанием оборудования;
+</p>
+<p>
+  Absolute Energy будет продолжать удовлетворять потребности своих
+  клиентов с такой же серьезностью и решимостью в будущем, как и в
+  прошлом.
+</p>
+<br />
+<p>
+  <strong>Проектирование -</strong>
+   проектирование малой и средней мощности, план расположения
+  оборудований и кабелей, подготовка документации по дизельной
+  электро-станции,  расчет мощности электроустановок, расчеты и
+  планы питающих сетей,  расчет электрических щитов,  расчет
+  нагрузки,  планы заземления контура,  система снабжение
+  топливом,  система автоматизации и пожарной безопасности.
+</p>
+<p>
+  <strong>Поставка –</strong>
+  подготовка генератора, проверка генератора на заводе у
+  производителя, подготовка необходимого транспорта и
+  товаросопроводительного документа, таможенная очистка,
+  сертификация поставленных товаров
+</p>
+<p>
+  <strong>Установка –</strong>
+  установка, монтаж и настройка. Подготовка персонала по работе с
+  генератором.
+</p>
+<p>
+  <strong>Сервисное обслуживание -</strong>
+  предоставляем вам поддержку в различных областях, таких как
+  техническое обслуживание, ремонт, поставка запасных частей,
+  монтаж и пуско-наладка системы. Благодаря быстрому реагированию
+  мы предлагаем решения для вашего бизнеса с минимальными
+  простоями. Механические и электрические изменения в работе по
+  приведению объекта в соответствие со стандартами, Монтаж,
+  пуско-наладочные работы, ремонтные работы, Работы по
+  техническому обслуживанию, Модификации включения питания.
+</p>`;
   return (
     <AboutUsWrap>
       <Styles.Container>
-        <Styles.Column width="100%" align_items="center" gap={20}>
+        <Styles.Column width="100%" align_items="center" gap={32}>
           <Styles.Row size={{ xs: 12, md: 6 }} difference={{ xs: 0, md: 16 }}>
-            <GalleryWrap>
-              <WomenImage
+            <Styles.Column width="100%" gap={24}>
+              <Image
                 data-aos="fade-right"
-                className="gallery_Item"
-                src={women_works.src}
-                width={"500"}
-                height={220}
+                src="/images/about-us-img-1.png"
                 alt="boss works"
+                width={600}
+                height={380}
+                style={{
+                  width: "100%",
+                  height: "380px",
+                  borderRadius: "var(--block-border)",
+                }}
               />
               <Styles.Column
                 data-aos="fade-up-right"
                 width="100%"
                 align_items={"stretch"}
-                gap={20}
+                gap={24}
               >
                 <DailyUsers>
-                  <span>500K</span>
-                  Daily Active Users
+                  <Typography.H1 color="white">500K</Typography.H1>
+                  <Typography.H5 color="white">
+                    Daily Active Users
+                  </Typography.H5>
                 </DailyUsers>
-                <TeemImage
+                <Image
                   data-aos="fade-left"
-                  className="gallery_Item"
-                  src={teem_works.src}
+                  src="/images/about-us-img-2.png"
+                  alt="boss works"
                   width={500}
                   height={220}
-                  alt="boss works"
+                  style={{
+                    width: "calc(60% - 12px)",
+                    height: "200px",
+                    borderRadius: "var(--block-border)",
+                  }}
                 />
               </Styles.Column>
-            </GalleryWrap>
-          </Styles.Row>
-          <Styles.Row size={{ xs: 12, md: 6 }} difference={{ xs: 0, md: 16 }}>
-            <SectionTitle data-aos="fade-up">О компании</SectionTitle>
-            <Styles.Column
-              data-aos="fade-up"
-              width="100%"
-              direction={"column"}
-              gap={18}
-            >
-              <SectionDesc>
-                Наша компания успешно реализовала в Узбекистане более 50
-                проектов под ключ с ориентированным на клиента подходом,
-                инженерными решениями и оптимальными проектными возможностями с
-                проектированием, поставкой, установкой и после продажным
-                обслуживанием оборудования;Absolute Energy будет продолжать
-                удовлетворять потребности своих клиентов с такой же серьезностью
-                и решимостью в будущем, как и в прошлом.
-              </SectionDesc>
-              <SectionDesc>
-                Наша компания успешно реализовала в Узбекистане более 50
-                проектов под ключ с ориентированным на клиента подходом,
-                инженерными решениями и оптимальными проектными возможностями с
-                проектированием, поставкой, установкой и после продажным
-                обслуживанием оборудования;Absolute Energy будет продолжать
-                удовлетворять потребности своих клиентов с такой же серьезностью
-                и решимостью в будущем, как и в прошлом.
-              </SectionDesc>
-              <SectionDesc>
-                Наша компания успешно реализовала в Узбекистане более 50
-                проектов под ключ с ориентированным на клиента подходом,
-                инженерными решениями и оптимальными проектными возможностями с
-                проектированием, поставкой, установкой и после продажным
-                обслуживанием оборудования;Absolute Energy будет продолжать
-                удовлетворять потребности своих клиентов с такой же серьезностью
-                и решимостью в будущем, как и в прошлом.
-              </SectionDesc>
             </Styles.Column>
+          </Styles.Row>
+          <Styles.Row
+            size={{ xs: 12, md: 6 }}
+            difference={{ xs: 0, md: 16 }}
+            gap={16}
+          >
+            <Typography.H4 data-aos="fade-up">О компании</Typography.H4>
+            <ReposibilatyText dangerouslySetInnerHTML={{ __html: desc }} />
           </Styles.Row>
         </Styles.Column>
       </Styles.Container>

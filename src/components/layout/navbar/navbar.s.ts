@@ -39,10 +39,22 @@ export const NavbarWrap = styled.nav<{ main: boolean }>`
 `;
 
 export const LogoLink = styled(Link)`
-  font-size: 24px;
-
-  a {
-    display: none !important;
+  && {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    h5 {
+      display: none;
+      @media (min-width: 380px) {
+        display: block;
+      }
+      @media (min-width: 768px) {
+        display: none;
+      }
+      @media (min-width: 915px) {
+        display: block;
+      }
+    }
   }
 `;
 export const NavList = styled.ul`

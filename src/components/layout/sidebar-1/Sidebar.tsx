@@ -1,27 +1,24 @@
-import { FC, useEffect, useRef } from "react";
-import {
-  CloseButton,
-  Content,
-  LogoLink,
-  NavItem,
-  NavsList,
-  SidebarWrap,
-} from "./sidebar.s";
+import React, { useEffect, useRef } from "react";
+import { CloseButton, Content, NavsList, SidebarWrap } from "./sidebar.s";
 import Styles, { Typography } from "@/styles";
 import Icons from "@/assets/icons";
-import Link from "next/link";
-import mock from "@/mock";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import Link from "next/link";
 
-interface ISidebarProps {
+type Props = {
   open: boolean;
   onClose: () => void;
-}
+};
 
-export const Sidebar: FC<ISidebarProps> = ({ onClose, open }) => {
+const links = [
+  { text: "О компании", href: "#" },
+  { text: "Наши услуги", href: "#" },
+  { text: "Наши проекты", href: "#" },
+  { text: "Наши партнёры", href: "#" },
+];
+
+export default function Sidebar({ onClose, open }: Props) {
   const contentRef = useRef<null | HTMLDivElement>(null);
-  const { route } = useRouter();
 
   useEffect(() => {
     if (open) {
@@ -51,30 +48,31 @@ export const Sidebar: FC<ISidebarProps> = ({ onClose, open }) => {
     <SidebarWrap open={open}>
       <Content ref={contentRef} open={open}>
         <Styles.Column width="100%" content={"space-between"}>
-          <LogoLink href="/">
-            <Image
-              height={48}
-              width={48}
-              src="/images/Logo.png"
-              alt="Brand logo"
-            />
-            <Typography.H5 color="gradient">ABSOLUTE ENERGY</Typography.H5>
-          </LogoLink>
-
+          <Link href="/">
+            <Styles.Column align_items="center" gap={8}>
+              <Image
+                height={28}
+                width={28}
+                src="/images/Logo.png"
+                alt="Brand logo"
+              />
+              <Typography.H6 color="gradient">ABSOLUTE ENERGY</Typography.H6>
+            </Styles.Column>
+          </Link>
           <CloseButton onClick={onClose}>
-            <Icons.closeCircle.Linear />
+            <Icons.closeCircle.Linear width={20} height={20} />
           </CloseButton>
         </Styles.Column>
         <NavsList>
-          {mock.navItems.map(({ text, url }, index) => (
-            <NavItem key={index} active={route === url} onClick={onClose}>
-              <Link href={url}>
-                <Typography.H5>{text}</Typography.H5>
+          {links.map(({ href, text }) => (
+            <li key={text} onClick={() => onClose()}>
+              <Link href={href}>
+                <Typography.H6 color="dark500">{text}</Typography.H6>
               </Link>
-            </NavItem>
+            </li>
           ))}
         </NavsList>
       </Content>
     </SidebarWrap>
   );
-};
+}

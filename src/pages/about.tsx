@@ -17,7 +17,6 @@ export default function About({}: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {/* <about.Banner /> */}
         <commonComp.PageHeader
           title="О НАС"
           description="Информация о нашей компании, нашей деятельности и услуг"
