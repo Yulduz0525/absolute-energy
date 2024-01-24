@@ -8,6 +8,7 @@ export const Container = styled.div`
     width: 100%;
     transition: all 250ms ease-in-out;
 
+    width: clamp(200px, 95%, 394px);
     // Extra small devices (landscape phones, 320px and 430px) - 24px
     @media (min-width: 320px) {
       width: clamp(296px, 95%, 394px);

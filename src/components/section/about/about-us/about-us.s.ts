@@ -1,17 +1,23 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-export const ReposibilatyWrap = styled.div`
-  width: 100%;
-`;
-
-export const TeemWorkImage = styled(Image)`
-  width: calc(50% - 16px);
-  object-fit: contain;
-
-  @media (max-width: 632px) {
+export const AboutUsWrap = styled.div`
+  && {
     width: 100%;
   }
+`;
+
+export const DailyUsers = styled.div`
+  padding: 48px 24px;
+  border-radius: var(--block-border);
+  background: var(--primary-500, #cd02ee);
+  width: calc(40% - 12px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 `;
 
 export const ReposibilatyText = styled.div`
@@ -50,10 +56,4 @@ export const ReposibilatyText = styled.div`
       }
     }
   }
-`;
-export const ServiceList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
 `;
