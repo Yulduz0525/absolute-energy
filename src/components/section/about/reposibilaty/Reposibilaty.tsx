@@ -6,8 +6,6 @@ import {
   TeemWorkImage,
 } from "./reposibilaty.s";
 import Styles, { Typography } from "@/styles";
-import teem_work2 from "@/assets/img/teem_work2.png";
-import teem_work3 from "@/assets/img/teem_work3.png";
 import { SuccessIcon } from "@/assets/img/success";
 
 type Props = {};
@@ -88,14 +86,14 @@ export default function Reposibilaty({}: Props) {
             <TeemWorkImage
               data-aos="fade-up"
               data-aos-delay="600"
-              src={teem_work2.src}
+              src="/images/about-us-img-3.png"
               width={300}
               height={450}
               alt="work process" ///sasas
             />
             <TeemWorkImage
               data-aos="fade-up-left"
-              src={teem_work3.src}
+              src="/images/about-us-img-4.png"
               width={300}
               height={450}
               alt="work process"

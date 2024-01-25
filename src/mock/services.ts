@@ -1,6 +1,6 @@
 export const services = [
   {
-    img: "/images/services/3.png",
+    img: "/images/services/1.png",
     title: "Аренда генераторов",
     description:
       "Гарантированная энергия без простоев: Аренда дизельных генераторов от 15 КВА до 500 КВА.",
@@ -57,7 +57,7 @@ export const services = [
     `,
   },
   {
-    img: "/images/services/3.png",
+    img: "/images/services/2.png",
     title: "Диагностика",
     description:
       "Экспертная диагностика для генераторов любого типа: Обеспечьте бесперебойность вашей энергии!",
@@ -171,7 +171,7 @@ export const services = [
   </p>`,
   },
   {
-    img: "/images/services/3.png",
+    img: "/images/services/4.png",
     title: "Ремонт дизельных генераторов",
     description:
       "Надежность в каждом вращении: Ремонт дизельных генераторов для вашей уверенности в энергоснабжении.",
@@ -188,7 +188,7 @@ export const services = [
     `,
   },
   {
-    img: "/images/services/3.png",
+    img: "/images/services/5.png",
     title: "Проектирование",
     description:
       "Инновационные решения для вашего успеха: Проектирование энергетических систем на высшем уровне.",
@@ -206,7 +206,7 @@ export const services = [
     `,
   },
   {
-    img: "/images/services/3.png",
+    img: "/images/services/6.png",
     title: "Пуско-наладочное работы",
     description:
       "Безупречный старт: Пуско-наладочные работы для надежности вашего оборудования.",
@@ -223,7 +223,7 @@ export const services = [
     `,
   },
   {
-    img: "/images/services/3.png",
+    img: "/images/services/7.png",
     title: "Монтажные работы",
     description:
       "Эффективный запуск, надежная работа: Монтаж дизельных генераторов от профессионалов в области энергетики.",
@@ -240,7 +240,7 @@ export const services = [
     `,
   },
   {
-    img: "/images/services/3.png",
+    img: "/images/services/8.png",
     title: "Испытания под нагрузкой",
     description:
       "Надежность подтверждена: Испытания под нагрузкой дизельных установок для уверенности в их работе.",
@@ -257,7 +257,7 @@ export const services = [
     `,
   },
   {
-    img: "/images/services/3.png",
+    img: "/images/services/9.png",
     title: "Системы автоматизации ДГУ",
     description:
       "Эффективное энергоснабжение в каждом включении: Системы автоматизации для ДГУ с гарантией бесперебойной работы.",

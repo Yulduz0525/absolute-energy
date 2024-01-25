@@ -8,7 +8,6 @@ import mock from "@/mock";
 interface IFooterProps {}
 
 export const Footer: FC<IFooterProps> = ({}) => {
-  
   return (
     <FooterWrap>
       <Styles.Container>
@@ -38,8 +37,8 @@ export const Footer: FC<IFooterProps> = ({}) => {
                 {mock.navFooter.contactsTitle}
               </Typography.H5>
               <Styles.Column width="100%" gap={16}>
-                {mock.navFooter.contacts.map((contact) => (
-                  <ListItem href={contact.href}>
+                {mock.navFooter.contacts.map((contact, index) => (
+                  <ListItem href={contact.href} key={index}>
                     <contact.icon />
                     <Typography.PARAGRAPH color="white">
                       {contact.label}
