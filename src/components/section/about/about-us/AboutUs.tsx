@@ -75,8 +75,10 @@ export default function AboutUs({}: Props) {
                 gap={24}
               >
                 <DailyUsers>
-                  <Typography.H1 color="white">500K</Typography.H1>
-                  <Typography.H5 color="white">
+                  <Typography.H1 color="white" align="center">
+                    500K
+                  </Typography.H1>
+                  <Typography.H5 color="white" align="center">
                     Daily Active Users
                   </Typography.H5>
                 </DailyUsers>

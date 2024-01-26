@@ -25,11 +25,12 @@ export const Partners: FC<IPartnersProps> = (props) => {
           content="center"
           align_items="center"
         >
-          {partnersList.map((item) => (
+          {partnersList.map((item, index) => (
             <Styles.Row
               size={{ xs: 6, sm: 3, xl: 2 }}
               difference={{ xs: 12, sm: 24, md: 32, lg: 36, xl: 40 }}
               content="center"
+              key={index}
             >
               <Image
                 src={item}

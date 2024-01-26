@@ -42,9 +42,7 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
             align_items="center"
             gap={16}
           >
-            <Styles.SectionSubTitle data-aos="fade-up">
-              Main Services
-            </Styles.SectionSubTitle>
+            
             <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300">
               Основные направления
             </Styles.SectionTitle>

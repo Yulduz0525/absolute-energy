@@ -42,7 +42,7 @@ export const Navbar: FC<INavbarProps> = ({}) => {
             ))}
           </NavList>
           <MenuButton onClick={() => setMenuOpen(true)}>
-            <Icons.menu.Linear />
+            <Icons.menu.Broken />
           </MenuButton>
         </Styles.Container>
       </NavbarWrap>
