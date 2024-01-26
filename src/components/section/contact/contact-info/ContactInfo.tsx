@@ -14,7 +14,9 @@ export const ContactInfo: FC<IContactInfoProps> = (props) => {
           gap={24}
         >
           <Styles.Column width="100%" gap={16}>
-            <Typography.H4 color="dark500">Contact Info</Typography.H4>
+            <Typography.H4 color="dark500">
+              Контактная информация:
+            </Typography.H4>
             <Styles.Column width="100%" gap={12} direction="column">
               <ContactText>
                 Адрес:{" "}

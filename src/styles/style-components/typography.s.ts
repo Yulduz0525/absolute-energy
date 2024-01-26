@@ -59,6 +59,10 @@ export const H1 = styled.h1<TTypographyProps>`
     font-size: 48px;
     font-weight: 700;
     letter-spacing: -0.8px;
+
+    @media (max-width: 425px) {
+      font-size: 36px;
+    }
   }
 `;
 export const H2 = styled.h2<TTypographyProps>`
@@ -69,6 +73,10 @@ export const H2 = styled.h2<TTypographyProps>`
     font-size: 36px;
     font-weight: 700;
     letter-spacing: -0.8px;
+
+    @media (max-width: 425px) {
+      font-size: 30px;
+    }
   }
 `;
 export const H3 = styled.h3<TTypographyProps>`
@@ -79,6 +87,10 @@ export const H3 = styled.h3<TTypographyProps>`
     font-size: 30px;
     font-weight: 700;
     letter-spacing: -0.8px;
+
+    @media (max-width: 425px) {
+      font-size: 24px;
+    }
   }
 `; //DSDSD
 export const H4 = styled.h4<TTypographyProps>`
@@ -89,6 +101,10 @@ export const H4 = styled.h4<TTypographyProps>`
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -0.8px;
+
+    @media (max-width: 425px) {
+      font-size: 20px;
+    }
   }
 `;
 export const H5 = styled.h5<TTypographyProps>`
@@ -98,6 +114,10 @@ export const H5 = styled.h5<TTypographyProps>`
     /* HEADING5 */
     font-size: 20px;
     font-weight: 600;
+
+    @media (max-width: 425px) {
+      font-size: 18px;
+    }
   }
 `;
 
