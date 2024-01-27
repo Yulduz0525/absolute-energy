@@ -4,6 +4,8 @@ import { mainServices } from "./main-services";
 import { navItems } from "./menus";
 import { portfolios } from "./portfolios";
 import { services } from "./services";
+import VariantsSettings from "./variants-animation";
+
 export default {
   navItems,
   navFooter,
@@ -11,4 +13,5 @@ export default {
   mainServices,
   portfolios,
   services,
+  VariantsSettings
 };

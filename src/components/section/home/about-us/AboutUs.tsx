@@ -7,8 +7,10 @@ import {
   TeemImage,
 } from "./about-us.s";
 import Styles, { Typography } from "@/styles";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Icons from "@/assets/icons";
+import Animations from "@/animations";
 
 interface IAboutUsProps {}
 
@@ -58,12 +60,13 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
               gap={14}
             >
               <Styles.Column
-                data-aos="fade-left"
                 direction="column"
                 align_items="flex-start"
                 gap={12}
               >
-                <Typography.H5>About us</Typography.H5>
+                <Animations.Title>
+                  <Typography.H5>About us</Typography.H5>
+                </Animations.Title>
                 <SubTitleLine />
               </Styles.Column>
               <Styles.Column
@@ -71,29 +74,37 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
                 direction="column"
                 align_items="flex-start"
               >
-                <Typography.H1 data-aos="fade-left" data-aos-delay="300">
-                  О компании
-                </Typography.H1>
-                <Typography.LEAD_TEXT
-                  color="dark200"
-                  data-aos="fade-left"
-                  data-aos-delay="600"
+                <Animations.Title>
+                  <Typography.H1>О компании</Typography.H1>
+                </Animations.Title>
+                <motion.div
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  viewport={{ once: true }}
                 >
-                  Компания «ABSOLUTE ENERGY» основана в 2016 г. и является
-                  официальным дилером торговых марок AKSA, Cummins, RID,
-                  GENPOWER и Mitsubishi на территории Республики Узбекистан. На
-                  сегодняшний день продукция компании широко востребована в
-                  нефтегазовой отрасли, а также в сегментах телекоммуникации,
-                  гостиничной и банковской системы. В компании имеется
-                  достаточное количество обученных и сертифицированных сервисных
-                  инженеров для оказания гарантийной после гарантийной поддержки
-                  оборудования в режиме 24/7
-                </Typography.LEAD_TEXT>
+                  <Typography.LEAD_TEXT color="dark200">
+                    Компания «ABSOLUTE ENERGY» основана в 2016 г. и является
+                    официальным дилером торговых марок AKSA, Cummins, RID,
+                    GENPOWER и Mitsubishi на территории Республики Узбекистан.
+                    На сегодняшний день продукция компании широко востребована в
+                    нефтегазовой отрасли, а также в сегментах телекоммуникации,
+                    гостиничной и банковской системы. В компании имеется
+                    достаточное количество обученных и сертифицированных
+                    сервисных инженеров для оказания гарантийной после
+                    гарантийной поддержки оборудования в режиме 24/7
+                  </Typography.LEAD_TEXT>
+                </motion.div>
               </Styles.Column>
             </Styles.Column>
-            <AboutBtn href="/about" data-aos="fade-left" data-aos-delay="800">
-              Подробнее <Icons.arrowRight.Broken />
-            </AboutBtn>
+            <motion.div
+              initial={{ y: 50 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true }}
+            >
+              <AboutBtn href="/about">
+                Подробнее <Icons.arrowRight.Broken />
+              </AboutBtn>
+            </motion.div>
           </Styles.Column>
         </Styles.Column>
       </Styles.Container>

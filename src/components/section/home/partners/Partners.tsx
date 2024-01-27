@@ -2,6 +2,7 @@ import { FC } from "react";
 import { PartnersWrap } from "./partners.s";
 import Styles, { Typography } from "@/styles";
 import Image from "next/image";
+import Animations from "@/animations";
 
 interface IPartnersProps {}
 
@@ -18,7 +19,9 @@ export const Partners: FC<IPartnersProps> = (props) => {
   return (
     <PartnersWrap>
       <Styles.Container>
-        <Typography.H5>НАШИ ПАРТНЁРЫ</Typography.H5>
+        <Animations.Title>
+          <Typography.H5>НАШИ ПАРТНЁРЫ</Typography.H5>
+        </Animations.Title>
         <Styles.Column
           width="100%"
           gap={48}

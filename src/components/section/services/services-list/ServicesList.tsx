@@ -9,6 +9,9 @@ import Styles, { Typography } from "@/styles";
 import Image from "next/image";
 import mock from "@/mock";
 import components from "@/components";
+import Animations from "@/animations";
+import { motion } from "framer-motion";
+import VariantsSettings from "@/mock/variants-animation";
 
 interface IServicesListProps {}
 
@@ -31,14 +34,24 @@ export const ServicesList: FC<IServicesListProps> = (props) => {
   return (
     <ServicesListWrap>
       <Styles.Container>
-        <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300">
-          Услуги
-        </Styles.SectionTitle>
-        <Styles.Column width="100%" gap={24}>
+        <Animations.Title>
+          <Styles.SectionTitle>Услуги</Styles.SectionTitle>
+        </Animations.Title>
+        <Styles.Column
+          width="100%"
+          gap={24}
+          as={motion.div}
+          variants={VariantsSettings.Container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {mock.services.map((item) => (
             <Styles.Row
               size={{ xs: 12, sm: 6, lg: 4 }}
               difference={{ xs: 0, sm: 12, lg: 16 }}
+              as={motion.div}
+              variants={VariantsSettings.Item}
             >
               <ServicesItem>
                 <Image
@@ -90,13 +103,6 @@ export const ServicesList: FC<IServicesListProps> = (props) => {
           <ServicesHtml dangerouslySetInnerHTML={{ __html: open.html }} />
         </Common.Modal>
       </Styles.Container>
-
-
-
-      
-
-
-      
     </ServicesListWrap>
   );
 };

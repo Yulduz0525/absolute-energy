@@ -8,6 +8,9 @@ import Styles, { Typography } from "@/styles";
 import mock from "@/mock";
 import Link from "next/link";
 import components from "@/components";
+import Animations from "@/animations";
+import { motion } from "framer-motion";
+import VariantsSettings from "@/mock/variants-animation";
 
 interface IMainServicesProps {}
 
@@ -42,20 +45,28 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
             align_items="center"
             gap={16}
           >
-            <Styles.SectionSubTitle data-aos="fade-up">
-              Main Services
-            </Styles.SectionSubTitle>
-            <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300">
-              Основные направления
-            </Styles.SectionTitle>
+            <Animations.Title>
+              <Styles.SectionSubTitle>Main Services</Styles.SectionSubTitle>
+            </Animations.Title>
+            <Animations.Title>
+              <Styles.SectionTitle>Основные направления</Styles.SectionTitle>
+            </Animations.Title>
           </Styles.Column>
 
-          <Styles.Column width="100%" gap={24}>
+          <Styles.Column
+            width="100%"
+            gap={24}
+            as={motion.div}
+            variants={VariantsSettings.Container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {mock.mainServices.map((mainService, index) => {
               return (
                 <Styles.Row
-                  data-aos="fade-up"
-                  data-aos-delay={index * 300 + ""}
+                  as={motion.div}
+                  variants={VariantsSettings.Item}
                   key={index}
                   size={{ xs: 12, sm: 6, lg: 4 }}
                   difference={{ xs: 0, sm: 12, lg: 16 }}

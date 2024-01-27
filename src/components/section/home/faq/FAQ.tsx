@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ExpandButton, FAQWrap, Question } from "./faq.s";
 import Styles, { Typography } from "@/styles";
 import { ChevronDown } from "@/assets/img/chevron-down";
+import Animations from "@/animations";
 
 type Props = {};
 
@@ -43,7 +44,11 @@ export default function FAQ({}: Props) {
     <FAQWrap>
       <Styles.Container>
         <Styles.Column width="100%" direction={"column"} gap={32}>
-          <Styles.SectionTitle>“Часто задаваемые вопросы”</Styles.SectionTitle>
+          <Animations.Title>
+            <Styles.SectionTitle>
+              “Часто задаваемые вопросы”
+            </Styles.SectionTitle>
+          </Animations.Title>
           <FAQColapse questions={questions} />
         </Styles.Column>
       </Styles.Container>

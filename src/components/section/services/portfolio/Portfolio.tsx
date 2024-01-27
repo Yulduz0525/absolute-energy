@@ -2,6 +2,8 @@ import { FC } from "react";
 import { PortfolioWrap } from "./portfolio.s";
 import Styles from "@/styles";
 import Image from "next/image";
+import Animations from "@/animations";
+import { motion } from "framer-motion";
 
 interface IPortfolioProps {
   images: [string, string, string, string, string];
@@ -11,9 +13,9 @@ export const Portfolio: FC<IPortfolioProps> = ({ images }) => {
   return (
     <PortfolioWrap>
       <Styles.Container>
-        <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300">
-          Портфолио
-        </Styles.SectionTitle>
+        <Animations.Title>
+          <Styles.SectionTitle>Портфолио</Styles.SectionTitle>
+        </Animations.Title>
         <Styles.Column width="100%" gap={24}>
           <Styles.Row
             size={{ xs: 12, sm: 6, lg: 4 }}
@@ -41,6 +43,7 @@ export const Portfolio: FC<IPortfolioProps> = ({ images }) => {
             size={{ xs: 12, sm: 6, lg: 4 }}
             difference={{ xs: 0, sm: 12, lg: 16 }}
             gap={24}
+            as={motion.div}
           >
             <Image
               src={images[2]}
