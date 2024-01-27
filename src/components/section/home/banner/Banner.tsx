@@ -1,13 +1,6 @@
 import React, { FC } from "react";
-import {
-  BannerWrap,
-  StatLine,
-  StatisticItem,
-  Statistics,
-  WaveAnimation,
-} from "./banner.s";
+import { BannerWrap, WaveAnimation } from "./banner.s";
 import Styles, { Typography } from "@/styles";
-import mock from "@/mock";
 
 export interface IBannerProps {}
 
@@ -24,25 +17,6 @@ export const Banner: FC<IBannerProps> = (props) => {
         <Typography.PARAGRAPH color="white" align="center">
           СЕРВИС МЕЖДУНАРОДНОГО КЛАССА
         </Typography.PARAGRAPH>
-
-        {/* <Statistics>
-          {mock.bannerStat.map((stat, index) => (
-            <>
-              <StatisticItem>
-                <Typography.H1 color="gradient" align="center">
-                  {stat.title}
-                </Typography.H1>
-                <Styles.Column width="100%" direction="column" content="center">
-                  <Typography.H4 align="center">{stat.subTitle}</Typography.H4>
-                  <Typography.PARAGRAPH align="center">
-                    {stat.description}
-                  </Typography.PARAGRAPH>
-                </Styles.Column>
-              </StatisticItem>
-              {mock.bannerStat.length - 1 !== index && <StatLine />}
-            </>
-          ))}
-        </Statistics> */}
       </Styles.Container>
       <WaveAnimation>
         <div>

@@ -22,7 +22,7 @@ export const navFooter = {
 
   navigations: [
     {
-      title: "Компания",
+      title: "Быстрые ссылки",
       links: [
         {
           label: "Главная",
@@ -43,35 +43,18 @@ export const navFooter = {
       ],
     },
     {
-      title: "Legal",
+      title: "Социальные сети",
       links: [
         {
-          label: "About",
+          label: "Telegram",
           href: "#",
         },
         {
-          label: "Contact",
+          label: "Instagram",
           href: "#",
         },
         {
-          label: "Blogs",
-          href: "#",
-        },
-      ],
-    },
-    {
-      title: "Quick Links",
-      links: [
-        {
-          label: "About",
-          href: "#",
-        },
-        {
-          label: "Contact",
-          href: "#",
-        },
-        {
-          label: "Blogs",
+          label: "Facebook",
           href: "#",
         },
       ],

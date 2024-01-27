@@ -25,7 +25,7 @@ export const Footer: FC<IFooterProps> = ({}) => {
         <DividingLine />
         <Styles.Column width="100%" gap={{ xs: 24, sm: 16 }}>
           <Styles.Row
-            size={{ xs: 12, md: 6, lg: 3, "2xl": 2 }}
+            size={{ xs: 12, md: 4, lg: 3, "2xl": 2 }}
             difference={{ xs: 0, md: 12, lg: 13 }}
           >
             <Styles.Column
@@ -51,8 +51,8 @@ export const Footer: FC<IFooterProps> = ({}) => {
 
           {mock.navFooter.navigations.map((navigation) => (
             <Styles.Row
-              size={{ xs: 12, sm: 4, md: 2, lg: 2 }}
-              difference={{ xs: 11, md: 12, lg: 13 }}
+              size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
+              difference={{ xs: 11, sm: 8, md: 12, lg: 13 }}
             >
               <Styles.Column
                 width="100%"
@@ -78,7 +78,7 @@ export const Footer: FC<IFooterProps> = ({}) => {
             difference={{ xs: 0, lg: 13 }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.565046287629!2d69.34789677643704!3d41.318324900275606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef52d63c41497%3A0x63d4f12ed13f4154!2sFelix%20IT%20Solutions%20Uzbekistan!5e0!3m2!1suz!2s!4v1704260388599!5m2!1suz!2s"
+              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5994.659460739598!2d69.28853!3d41.30169!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE4JzA2LjEiTiA2OcKwMTcnMTguNyJF!5e0!3m2!1suz!2s!4v1706172514334!5m2!1suz!2s"
               width="100%"
               height="260px"
               style={{ border: 0 }}
