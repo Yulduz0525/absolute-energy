@@ -11,9 +11,6 @@ export const Services: FC<IServicesProps> = (props) => {
     <ServicesWrap>
       <Styles.Container>
         <Styles.Column width="100%" direction="column">
-          <Styles.SectionSubTitle data-aos="fade-up">
-            Main Services
-          </Styles.SectionSubTitle>
           <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300">
             Основные направления
           </Styles.SectionTitle>

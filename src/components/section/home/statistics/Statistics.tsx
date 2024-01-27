@@ -6,10 +6,6 @@ import mock from "@/mock";
 interface IStatisticsProps {}
 
 export const Statistics: FC<IStatisticsProps> = (props) => {
-  const targetRef = useRef();
-
-  console.log(targetRef?.current);
-
   return (
     <StatisticsWrap>
       <Styles.Container>

@@ -46,10 +46,9 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
             gap={16}
           >
             <Animations.Title>
-              <Styles.SectionSubTitle>Main Services</Styles.SectionSubTitle>
-            </Animations.Title>
-            <Animations.Title>
-              <Styles.SectionTitle>Основные направления</Styles.SectionTitle>
+              <Styles.SectionTitle data-aos="fade-up" data-aos-delay="300">
+                Основные направления
+              </Styles.SectionTitle>
             </Animations.Title>
           </Styles.Column>
 

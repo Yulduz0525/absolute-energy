@@ -6,8 +6,6 @@ import {
   TeemWorkImage,
 } from "./reposibilaty.s";
 import Styles, { Typography } from "@/styles";
-import teem_work2 from "@/assets/img/teem_work2.png";
-import teem_work3 from "@/assets/img/teem_work3.png";
 import { SuccessIcon } from "@/assets/img/success";
 import Animations from "@/animations";
 import { motion } from "framer-motion";
@@ -99,7 +97,7 @@ export default function Reposibilaty({}: Props) {
             gap={32}
           >
             <TeemWorkImage
-              src={teem_work2.src}
+              src="/images/about-us-img-3.png"
               width={300}
               height={450}
               alt="work process" ///sasas
@@ -110,7 +108,7 @@ export default function Reposibilaty({}: Props) {
               transition={{ delay: 0.6 }}
             />
             <TeemWorkImage
-              src={teem_work3.src}
+              src="/images/about-us-img-4.png"
               width={300}
               height={450}
               alt="work process"

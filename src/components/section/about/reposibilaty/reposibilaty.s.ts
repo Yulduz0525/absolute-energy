@@ -7,7 +7,8 @@ export const ReposibilatyWrap = styled.div`
 
 export const TeemWorkImage = styled(Image)`
   width: calc(50% - 16px);
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: var(--block-border);
 
   @media (max-width: 632px) {
     width: 100%;

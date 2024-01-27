@@ -40,8 +40,8 @@ export default function ContactForm({}: Props) {
             difference={{ lg: 24, xs: 0 }}
           >
             <FormItem htmlFor="">
-              <Styles.Subtext>ФИО *</Styles.Subtext>
-              <FormInput placeholder="Введите ФИО" />
+              <Styles.Subtext>Компания *</Styles.Subtext>
+              <FormInput placeholder="Название вашей компании" />
             </FormItem>
           </Styles.Row>
           <Styles.Row
@@ -49,8 +49,8 @@ export default function ContactForm({}: Props) {
             difference={{ lg: 24, xs: 0 }}
           >
             <FormItem htmlFor="">
-              <Styles.Subtext>Ваша почта *</Styles.Subtext>
-              <FormInput placeholder="example@yourmail.com" />
+              <Styles.Subtext>Тема *</Styles.Subtext>
+              <FormInput placeholder="Опишите вкратце" />
             </FormItem>
           </Styles.Row>
         </Styles.Column>

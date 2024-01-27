@@ -1,73 +1,60 @@
 import Icons from "@/assets/icons";
 
 export const navFooter = {
-  contactsTitle: "Reach us",
+  contactsTitle: "Связаться с нами",
   contacts: [
     {
       icon: Icons.callCalling.Broken,
-      label: "+1012 3456 789",
-      href: "tel:123-456-7890",
+      label: "+99895 145 55 55",
+      href: "tel:998951455555",
     },
     {
       icon: Icons.sms.Broken,
-      label: "demo@gmail.com",
-      href: "mailto:john@example.com",
+      label: "info@aenergy.uz",
+      href: "mailto:info@aenergy.uz",
     },
     {
       icon: Icons.location.Broken,
-      label: "132 Dartmouth Street Boston, Massachusetts 02156 United States",
-      href: "#",
+      label: "Istiqbol ko'chasi 113, Тоshkent, Toshkent",
+      href: "https://maps.app.goo.gl/7FCrChQjHmmEAMPq5",
     },
   ],
 
   navigations: [
     {
-      title: "Company",
+      title: "Быстрые ссылки",
       links: [
         {
-          label: "About",
-          href: "#",
+          label: "Главная",
+          href: "/",
         },
         {
-          label: "Contact",
-          href: "#",
+          label: "О компании",
+          href: "/about",
         },
         {
-          label: "Blogs",
-          href: "#",
+          label: "Наши услуги",
+          href: "/services",
+        },
+        {
+          label: "Контакт",
+          href: "/contact",
         },
       ],
     },
     {
-      title: "Legal",
+      title: "Социальные сети",
       links: [
         {
-          label: "About",
+          label: "Telegram",
           href: "#",
         },
         {
-          label: "Contact",
+          label: "Instagram",
           href: "#",
         },
         {
-          label: "Blogs",
-          href: "#",
-        },
-      ],
-    },
-    {
-      title: "Quick Links",
-      links: [
-        {
-          label: "About",
-          href: "#",
-        },
-        {
-          label: "Contact",
-          href: "#",
-        },
-        {
-          label: "Blogs",
+          label: "Facebook",
           href: "#",
         },
       ],
