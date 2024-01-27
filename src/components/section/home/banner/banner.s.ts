@@ -28,68 +28,6 @@ export const BannerWrap = styled.div`
   }
 `;
 
-export const Statistics = styled.div`
-  && {
-    width: 100%;
-    max-width: 992px;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.8);
-
-    /* Box */
-    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    bottom: -40px;
-    z-index: 9;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-`;
-export const StatisticItem = styled.div`
-  && {
-    display: flex;
-    padding: 20px 32px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    @media (max-width: 768px) {
-      padding: 8px;
-    }
-  }
-`;
-
-export const StatLine = styled.div`
-  width: 90%;
-  max-width: 260px;
-  height: 2px;
-
-  background: linear-gradient(
-    90deg,
-    rgba(37, 47, 64, 0) 0%,
-    #515966 49.48%,
-    rgba(37, 47, 64, 0) 100%
-  );
-
-  @media (min-width: 768px) {
-    width: 2px;
-    height: 160px;
-    background: linear-gradient(
-      0deg,
-      rgba(37, 47, 64, 0) 0%,
-      #515966 49.48%,
-      rgba(37, 47, 64, 0) 100%
-    );
-  }
-`;
-
 export const WaveAnimation = styled.div`
   && {
     position: absolute;
