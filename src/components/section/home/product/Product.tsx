@@ -12,10 +12,10 @@ export const Product: FC<IProductProps> = ({}) => {
     <ProductWrap>
       <Styles.Container>
         <Styles.Column width="100%" direction="column">
-          <Styles.SectionTitle data-aos="fade-up">
+          <Styles.SectionTitle>
             Отзывы наших <Styles.Subtext> довольных клиентов</Styles.Subtext>
           </Styles.SectionTitle>
-          <Styles.SectionDescription data-aos="fade-up" data-aos-delay="300">
+          <Styles.SectionDescription >
             Several selected clients, who already believe in our service.
           </Styles.SectionDescription>
         </Styles.Column>

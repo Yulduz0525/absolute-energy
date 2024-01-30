@@ -14,26 +14,36 @@ export const ContactInfo: FC<IContactInfoProps> = (props) => {
           gap={24}
         >
           <Styles.Column width="100%" gap={16}>
-            <Typography.H4 color="dark500">
+            <Typography.H3 color="dark500">
               Контактная информация:
-            </Typography.H4>
+            </Typography.H3>
             <Styles.Column width="100%" gap={12} direction="column">
-              <ContactText>
+              <Typography.H5>
                 Адрес:{" "}
-                <Styles.Subtext>
+                <Styles.Subtext style={{ opacity: "60%" }}>
                   Istiqbol ko'chasi 113, Тоshkent, Toshkent
                 </Styles.Subtext>
-              </ContactText>
-              <ContactText>
-                Тел: <Styles.Subtext> +998951455555</Styles.Subtext>
-              </ContactText>
-              <ContactText>
-                Телеграмма: <Styles.Subtext> +998951455555</Styles.Subtext>
-              </ContactText>
-              <ContactText>
+              </Typography.H5>
+              <Typography.H5>
+                Тел:{" "}
+                <Styles.Subtext style={{ opacity: "60%" }}>
+                  {" "}
+                  +998951455555
+                </Styles.Subtext>
+              </Typography.H5>
+              <Typography.H5>
+                Телеграмма:{" "}
+                <Styles.Subtext style={{ opacity: "60%" }}>
+                  {" "}
+                  +998951455555
+                </Styles.Subtext>
+              </Typography.H5>
+              <Typography.H5>
                 Электронная почта:{" "}
-                <Styles.Subtext>info@aenergy.uz</Styles.Subtext>
-              </ContactText>
+                <Styles.Subtext style={{ opacity: "60%" }}>
+                  info@aenergy.uz
+                </Styles.Subtext>
+              </Typography.H5>
             </Styles.Column>
           </Styles.Column>
         </Styles.Row>

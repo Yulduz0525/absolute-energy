@@ -7,6 +7,8 @@ import {
 } from "./reposibilaty.s";
 import Styles, { Typography } from "@/styles";
 import { SuccessIcon } from "@/assets/img/success";
+import Animations from "@/animations";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -51,26 +53,37 @@ export default function Reposibilaty({}: Props) {
             direction={"column"}
             gap={32}
           >
-            <Typography.H2>Наши задачи</Typography.H2>
+            <Animations.Title>
+              <Typography.H2>Наши задачи</Typography.H2>
+            </Animations.Title>
             <ReposibilatyText dangerouslySetInnerHTML={{ __html: desc }} />
             <ServiceList>
               <Typography.PARAGRAPH
-                data-aos="fade-up"
-                data-aos-delay="0"
+                as={motion.h6}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0 }}
                 style={{ display: "flex", alignItems: "center", gap: "16px" }}
               >
                 <SuccessIcon /> Поставка
               </Typography.PARAGRAPH>
               <Typography.PARAGRAPH
-                data-aos="fade-up"
-                data-aos-delay="300"
+                as={motion.h6}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
                 style={{ display: "flex", alignItems: "center", gap: "16px" }}
               >
                 <SuccessIcon /> Установка
               </Typography.PARAGRAPH>
               <Typography.PARAGRAPH
-                data-aos="fade-up"
-                data-aos-delay="600"
+                as={motion.h6}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
                 style={{ display: "flex", alignItems: "center", gap: "16px" }}
               >
                 <SuccessIcon /> Сервисное обслуживание
@@ -84,19 +97,25 @@ export default function Reposibilaty({}: Props) {
             gap={32}
           >
             <TeemWorkImage
-              data-aos="fade-up"
-              data-aos-delay="600"
               src="/images/about-us-img-3.png"
               width={300}
               height={450}
               alt="work process" ///sasas
+              as={motion.img}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
             />
             <TeemWorkImage
-              data-aos="fade-up-left"
               src="/images/about-us-img-4.png"
               width={300}
               height={450}
               alt="work process"
+              as={motion.img}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
             />
           </Styles.Row>
         </Styles.Column>

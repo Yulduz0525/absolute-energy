@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.33",
     "@types/aos": "^3.0.7",
     "@types/styled-components": "^5.1.34",
     "aos": "^2.3.4",

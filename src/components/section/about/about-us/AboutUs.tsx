@@ -2,6 +2,8 @@ import React from "react";
 import { AboutUsWrap, DailyUsers, ReposibilatyText } from "./about-us.s";
 import Styles, { Typography } from "@/styles";
 import Image from "next/image";
+import Animations from "@/animations";
+import { motion } from "framer-motion";
 type Props = {};
 
 export default function AboutUs({}: Props) {
@@ -56,23 +58,33 @@ export default function AboutUs({}: Props) {
         <Styles.Column width="100%" align_items="center" gap={32}>
           <Styles.Row size={{ xs: 12, md: 6 }} difference={{ xs: 0, md: 16 }}>
             <Styles.Column width="100%" gap={24}>
-              <Image
-                data-aos="fade-right"
-                src="/images/about-us-img-1.png"
-                alt="boss works"
-                width={600}
-                height={380}
-                style={{
-                  width: "100%",
-                  height: "380px",
-                  borderRadius: "var(--block-border)",
-                }}
-              />
+              <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                style={{ width: "100%" }}
+              >
+                <Image
+                  src="/images/about-us-img-1.png"
+                  alt="boss works"
+                  width={600}
+                  height={380}
+                  style={{
+                    width: "100%",
+                    height: "380px",
+                    objectFit: "cover",
+                    borderRadius: "var(--block-border)",
+                  }}
+                />
+              </motion.div>
               <Styles.Column
-                data-aos="fade-up-right"
                 width="100%"
                 align_items={"stretch"}
                 gap={24}
+                as={motion.div}
+                initial={{ x: -100, opacity: 0, y: 100 }}
+                whileInView={{ x: 0, opacity: 1, y: 0 }}
+                viewport={{ once: true }}
               >
                 <DailyUsers>
                   <Typography.H1 color="white" align="center">
@@ -83,7 +95,6 @@ export default function AboutUs({}: Props) {
                   </Typography.H5>
                 </DailyUsers>
                 <Image
-                  data-aos="fade-left"
                   src="/images/about-us-img-2.png"
                   alt="boss works"
                   width={500}
@@ -91,6 +102,7 @@ export default function AboutUs({}: Props) {
                   style={{
                     width: "calc(60% - 12px)",
                     height: "200px",
+                    objectFit: "cover",
                     borderRadius: "var(--block-border)",
                   }}
                 />
@@ -102,7 +114,9 @@ export default function AboutUs({}: Props) {
             difference={{ xs: 0, md: 16 }}
             gap={16}
           >
-            <Typography.H4 data-aos="fade-up">О компании</Typography.H4>
+            <Animations.Title>
+              <Typography.H4>О компании</Typography.H4>
+            </Animations.Title>
             <ReposibilatyText dangerouslySetInnerHTML={{ __html: desc }} />
           </Styles.Row>
         </Styles.Column>

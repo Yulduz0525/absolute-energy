@@ -13,7 +13,6 @@ type Props = {};
 export default function ContactForm({}: Props) {
   return (
     <ContactFormWrap>
-      <Styles.Container>
         <Styles.Column width="100%" gap={48}>
           <Styles.Row
             size={{ md: 6, xs: 12, lg: 6, "2xl": 6 }}
@@ -61,7 +60,6 @@ export default function ContactForm({}: Props) {
           </FormItem>
         </Styles.Column>
         <FormButton type="submit">Отправить</FormButton>
-      </Styles.Container>
     </ContactFormWrap>
   );
 }

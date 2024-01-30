@@ -42,7 +42,7 @@ export const PositionBtn = styled.button`
 
     transition: all 250ms ease-in-out;
     &:hover {
-      background: var(--Dark-50, #e9eaec);
+      background: var(--dark25);
     }
   }
 `;
