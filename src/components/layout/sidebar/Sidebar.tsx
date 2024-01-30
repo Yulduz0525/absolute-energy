@@ -1,80 +1,142 @@
-import { FC, useEffect, useRef } from "react";
+import mock from "@/mock";
+import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
+import { FC } from "react";
 import {
-  CloseButton,
-  Content,
   LogoLink,
   NavItem,
   NavsList,
+  SidebarBgClose,
+  SidebarCloseIcon,
   SidebarWrap,
 } from "./sidebar.s";
 import Styles, { Typography } from "@/styles";
 import Icons from "@/assets/icons";
-import Link from "next/link";
-import mock from "@/mock";
-import Image from "next/image";
-import { useRouter } from "next/router";
 
 interface ISidebarProps {
   open: boolean;
   onClose: () => void;
 }
 
-export const Sidebar: FC<ISidebarProps> = ({ onClose, open }) => {
-  const contentRef = useRef<null | HTMLDivElement>(null);
-  const { route } = useRouter();
+export const Sidebar: FC<ISidebarProps> = ({ open, onClose }) => {
+  const sidebarVariants = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 200}px at 79% 40px)`,
+      transition: {
+        type: "spring",
+        stiffness: 20,
+        restDelta: 2,
+      },
+    }),
+    closed: {
+      clipPath: "circle(0px at 79% 50px)",
+      transition: {
+        delay: 0.5,
+        type: "spring",
+        stiffness: 400,
+        damping: 40,
+      },
+    },
+  };
 
-  useEffect(() => {
-    if (open) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
-  }, [open]);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        contentRef.current &&
-        !contentRef.current.contains(event.target as Node)
-      ) {
-        onClose();
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [onClose]);
+  const closeIconVariants = {
+    open: {
+      opacity: 1,
+    },
+    closed: {
+      opacity: 0,
+      transition: {
+        delay: 0.5,
+      },
+    },
+  };
 
   return (
-    <SidebarWrap open={open}>
-      <Content ref={contentRef} open={open}>
-        <Styles.Column width="100%" content={"space-between"}>
-          <LogoLink href="/">
-            <Image
-              height={48}
-              width={48}
-              src="/images/Logo.png"
-              alt="Brand logo"
-            />
-            <Typography.H5 color="gradient">ABSOLUTE ENERGY</Typography.H5>
-          </LogoLink>
+    <motion.nav initial={false} animate={open ? "open" : "closed"}>
+      <SidebarWrap variants={sidebarVariants}>
+        <SidebarCloseIcon variants={closeIconVariants}>
+          <Styles.Column
+            width="100%"
+            content={"space-between"}
+            direction={"row"}
+            onClick={onClose}
+          >
+            <LogoLink>
+              <Typography.H5 color="gradient">ABSOLUTE ENERGY</Typography.H5>
+              <Icons.closeCircle.Broken />
+            </LogoLink>
+          </Styles.Column>
+        </SidebarCloseIcon>
+        <Navigations />
+      </SidebarWrap>
+      <AnimatePresence>
+        {open && (
+          <SidebarBgClose
+            onClick={onClose}
+            open={open}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { delay: 0.5 } }}
+          />
+        )}
+      </AnimatePresence>
+    </motion.nav>
+  );
+};
 
-          <CloseButton onClick={onClose}>
-            <Icons.closeCircle.Linear />
-          </CloseButton>
-        </Styles.Column>
-        <NavsList>
-          {mock.navItems.map(({ text, url }, index) => (
-            <NavItem key={index} active={route === url} onClick={onClose}>
-              <Link href={url}>
-                <Typography.H5>{text}</Typography.H5>
-              </Link>
-            </NavItem>
-          ))}
-        </NavsList>
-      </Content>
-    </SidebarWrap>
+interface INavigationProps {}
+
+const Navigations: FC<INavigationProps> = () => {
+  const fatherVariants = {
+    open: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const childVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
+
+  return (
+    <Styles.Row
+      as={motion.div}
+      size={12}
+      align_items={"center"}
+      difference={10}
+      variants={fatherVariants}
+      content="center"
+      style={{ width: "100%" }}
+    >
+      <NavsList>
+        {mock.navItems.map(({ text, url }, index) => (
+          <NavItem
+            key={index}
+            variants={childVariants}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link href={url}>
+              <Typography.H5>{text}</Typography.H5>
+            </Link>
+          </NavItem>
+        ))}
+      </NavsList>
+    </Styles.Row>
   );
 };

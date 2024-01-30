@@ -28,7 +28,9 @@ export const FormInput = styled.input`
   border: 1px solid var(--dark-100, #bbbfc4);
   background: var(--White, #fff);
 
-  color: var(--dark-100, #bbbfc4);
+  color: var(--dark500, #bbbfc4);
+
+  transition: all 200ms;
 
   /* LEAD-TEXT */
   font-family: Montserrat;
@@ -36,6 +38,10 @@ export const FormInput = styled.input`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px var(--primary_500);
+  }
 `;
 
 export const FormItem = styled.label`
@@ -58,6 +64,8 @@ export const FormItem = styled.label`
 export const MessageArea = styled.textarea`
   padding: 24px 32px;
   width: 100%;
+  max-width: 100%;
+  max-height: 400px;
 
   display: flex;
   align-items: center;
@@ -68,7 +76,9 @@ export const MessageArea = styled.textarea`
   border: 1px solid var(--dark-100, #bbbfc4);
   background: var(--White, #fff);
 
-  color: var(--dark-100, #bbbfc4);
+  color: var(--dark500, #bbbfc4);
+
+  transition: all 200ms;
 
   /* LEAD-TEXT */
   font-family: Montserrat;
@@ -78,6 +88,10 @@ export const MessageArea = styled.textarea`
   line-height: normal;
 
   height: 350px;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px var(--primary_500);
+  }
 `;
 
 export const FormButton = styled.button`

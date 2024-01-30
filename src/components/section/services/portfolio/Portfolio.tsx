@@ -22,28 +22,45 @@ export const Portfolio: FC<IPortfolioProps> = ({ images }) => {
             difference={{ xs: 0, sm: 12, lg: 16 }}
             gap={24}
           >
-            <Image
-              src={images[0]}
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "270px" }}
-            />
-            <Image
-              src={images[1]}
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "270px" }}
-            />
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              style={{ width: "100%" }}
+            >
+              <Image
+                src={images[0]}
+                alt=""
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: "100%", height: "270px" }}
+              />
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              style={{ width: "100%" }}
+            >
+              <Image
+                src={images[1]}
+                alt=""
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: "100%", height: "270px" }}
+              />
+            </motion.div>
           </Styles.Row>
           <Styles.Row
             size={{ xs: 12, sm: 6, lg: 4 }}
             difference={{ xs: 0, sm: 12, lg: 16 }}
             gap={24}
             as={motion.div}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
           >
             <Image
               src={images[2]}
@@ -59,22 +76,36 @@ export const Portfolio: FC<IPortfolioProps> = ({ images }) => {
             difference={{ xs: 0, lg: 16 }}
             gap={24}
           >
-            <Image
-              src={images[3]}
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "270px" }}
-            />
-            <Image
-              src={images[4]}
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "270px" }}
-            />
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              style={{ width: "100%" }}
+            >
+              <Image
+                src={images[3]}
+                alt=""
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: "100%", height: "270px" }}
+              />
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              style={{ width: "100%" }}
+            >
+              <Image
+                src={images[4]}
+                alt=""
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: "100%", height: "270px" }}
+              />
+            </motion.div>
           </Styles.Row>
         </Styles.Column>
       </Styles.Container>

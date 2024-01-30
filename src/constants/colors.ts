@@ -25,6 +25,7 @@ const secondaryColor = {
 };
 
 const dark_green = {
+  dark25: "#F9F9F9",
   dark50: "#E9EAEC",
   dark100: "#BBBFC4",
   dark200: "#9B9FA7",

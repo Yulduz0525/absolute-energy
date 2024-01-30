@@ -1,21 +1,22 @@
-import { FC, useState } from "react";
+import Styles, { Typography } from "@/styles";
+import Image from "next/image";
+import mock from "@/mock";
+import components from "@/components";
+import Animations from "@/animations";
+import VariantsSettings from "@/mock/variants-animation";
+import { FC, useRef, useState } from "react";
 import {
   ServicesButton,
   ServicesHtml,
   ServicesItem,
   ServicesListWrap,
 } from "./services-list.s";
-import Styles, { Typography } from "@/styles";
-import Image from "next/image";
-import mock from "@/mock";
-import components from "@/components";
-import Animations from "@/animations";
 import { motion } from "framer-motion";
-import VariantsSettings from "@/mock/variants-animation";
 
 interface IServicesListProps {}
 
 export const ServicesList: FC<IServicesListProps> = (props) => {
+  const containerRef = useRef(null)
   const Common = components.common;
 
   const [openType, setOpenType] = useState(false);
@@ -32,7 +33,7 @@ export const ServicesList: FC<IServicesListProps> = (props) => {
   });
 
   return (
-    <ServicesListWrap>
+    <ServicesListWrap ref={containerRef}>
       <Styles.Container>
         <Animations.Title>
           <Styles.SectionTitle>Услуги</Styles.SectionTitle>
@@ -44,7 +45,7 @@ export const ServicesList: FC<IServicesListProps> = (props) => {
           variants={VariantsSettings.Container}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, root: containerRef }}
         >
           {mock.services.map((item) => (
             <Styles.Row

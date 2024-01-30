@@ -20,7 +20,7 @@ export default function Contact({}: Props) {
       <main>
         <commonComp.PageHeader
           title="Контакты"
-          description="Информация о нашей компании, нашей деятельности и услуг"
+          links={<commonComp.ContactSectionHeader />}
         />
         <Sections.ContactInfo />
         <Sections.ContactForm />

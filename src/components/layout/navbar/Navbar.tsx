@@ -1,21 +1,20 @@
-import { FC, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { LogoLink, MenuButton, NavItem, NavList, NavbarWrap } from "./navbar.s";
-import Styles, { Typography } from "@/styles";
 import mock from "@/mock";
 import Icons from "@/assets/icons";
+import Link from "next/link";
+import Image from "next/image";
+import Styles, { Typography } from "@/styles";
+import { FC } from "react";
+import { LogoLink, MenuButton, NavItem, NavList, NavbarWrap } from "./navbar.s";
 import { useRouter } from "next/router";
 import { Sidebar } from "../sidebar";
+import { useCycle } from "framer-motion";
 
 interface INavbarProps {}
 
 export const Navbar: FC<INavbarProps> = ({}) => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useCycle(false, true);
 
   const { pathname } = useRouter();
-
-  console.log(pathname);
 
   return (
     <>
@@ -41,12 +40,12 @@ export const Navbar: FC<INavbarProps> = ({}) => {
               </NavItem>
             ))}
           </NavList>
-          <MenuButton onClick={() => setMenuOpen(true)}>
+          <MenuButton onClick={() => setMenuOpen()}>
             <Icons.menu.Broken />
           </MenuButton>
         </Styles.Container>
+        <Sidebar open={menuOpen} onClose={() => setMenuOpen()} />
       </NavbarWrap>
-      <Sidebar open={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );
 };
