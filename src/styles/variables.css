@@ -1,5 +1,6 @@
 :root {
   --main-border: 12px;
+  --big-border: 20px;
   --block-border: 32px;
   /* -------------------- gradient -------------------- */
   --gradient: linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%);
