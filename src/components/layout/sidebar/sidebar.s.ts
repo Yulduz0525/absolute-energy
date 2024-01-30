@@ -1,91 +1,65 @@
-import Link from "next/link";
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
-export const SidebarWrap = styled.div<{ open: Boolean }>`
-  && {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    justify-content: flex-end;
-
-    transition: all ease-in-out 250ms;
-
-    ${({ open }) =>
-      open
-        ? css`
-            z-index: 99;
-            & > div {
-              transition: all ease-in-out 250ms;
-              transform: translateX(0);
-            }
-          `
-        : css`
-            z-index: -1;
-            & > div {
-              transform: translateX(200%);
-            }
-          `};
-  }
+export const SidebarWrap = styled(motion.div)`
+  z-index: 1000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
 `;
 
-export const Content = styled.div<{ open: Boolean }>`
-  width: 380px;
-  max-width: 100%;
+export const SidebarBgClose = styled(motion.div)<{ open: Boolean }>`
+  width: 100%;
   height: 100%;
-  padding: 20px;
-  background-color: #fff;
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 400ms;
+  ${({ open }) =>
+    open
+      ? css`
+          display: block;
+        `
+      : css`
+          display: none;
+        `};
+`;
 
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`;
-export const CloseButton = styled.button`
-  border: none;
-  outline-width: 0;
-  cursor: pointer;
-  width: fit-content;
-`;
-export const LogoLink = styled(Link)`
-  && {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    h5 {
-      display: none;
-      @media (min-width: 380px) {
-        display: block;
-      }
-    }
-  }
-`;
 export const NavsList = styled.ul`
   width: fit-content;
   max-width: 100%;
   height: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
 
   list-style: none;
+  margin-top: 20px;
 `;
 
-export const NavItem = styled.li<{ active: boolean }>`
+export const NavItem = styled(motion.li)`
   && {
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     a {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 12px;
 
       padding: 12px 0;
       transition: all ease-in-out 250ms;
+
     }
     &:after {
       content: "";
@@ -113,25 +87,37 @@ export const NavItem = styled.li<{ active: boolean }>`
         width: 90%;
       }
     }
+  }
+`;
 
-    ${({ active }) =>
-      active &&
-      css`
-        h5 {
-          background: var(
-            --gradient1,
-            linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        &::after {
-          width: 30%;
-        }
-        &:hover::after {
-          width: 30%;
-        }
-      `}
+export const SidebarCloseIcon = styled(motion.div)`
+  display: flex;
+  justify-content: end;
+
+  svg {
+    cursor: pointer;
+  }
+`
+
+export const LogoLink = styled.div`
+  && {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    padding: 30px 50px 20px 30px;
+
+    h5 {
+      display: none;
+      @media (min-width: 380px) {
+        display: block;
+      }
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 `;

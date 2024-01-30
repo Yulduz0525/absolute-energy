@@ -1,7 +1,18 @@
-import { FC } from "react";
-import { PartnersWrap } from "./partners.s";
 import Styles, { Typography } from "@/styles";
-import Image from "next/image";
+import Animations from "@/animations";
+import { FC } from "react";
+import {
+  ImageWrapper,
+  Navigations,
+  PartnersImage,
+  PartnersWrap,
+  SwiperContainer,
+} from "./partners.s";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import Icons from "@/assets/icons";
 
 interface IPartnersProps {}
 
@@ -18,32 +29,62 @@ export const Partners: FC<IPartnersProps> = (props) => {
   return (
     <PartnersWrap>
       <Styles.Container>
-        <Typography.H5>НАШИ ПАРТНЁРЫ</Typography.H5>
-        <Styles.Column
-          width="100%"
-          gap={48}
-          content="center"
-          align_items="center"
-        >
-          {partnersList.map((item, index) => (
-            <Styles.Row
-              size={{ xs: 6, sm: 3, xl: 2 }}
-              difference={{ xs: 12, sm: 24, md: 32, lg: 36, xl: 40 }}
-              content="center"
-              key={index}
-            >
-              <Image
-                src={item}
-                alt=""
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
-              />
-            </Styles.Row>
-          ))}
-        </Styles.Column>
+        <Animations.Title>
+          <Typography.H5>НАШИ ПАРТНЁРЫ</Typography.H5>
+        </Animations.Title>
       </Styles.Container>
+      <SwiperContainer>
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          slidesPerView={1}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          spaceBetween={20}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+          }}
+          loop
+          navigation={{
+            nextEl: ".feedback-swiper_prev-btn",
+            prevEl: ".feedback-swiper_next-btn",
+          }}
+          style={{ width: "100%" }}
+        >
+          {partnersList.map((data, index) => (
+            <SwiperSlide key={index}>
+              <ImageWrapper>
+                <PartnersImage
+                  src={data}
+                  alt="image"
+                  width={200}
+                  height={200}
+                />
+              </ImageWrapper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* <Navigations size={{ xs: 2 }} difference={0} content={"space-between"}>
+          <button className="feedback-swiper_prev-btn">
+            <Icons.arrowLeft.Broken />
+          </button>
+          <button className="feedback-swiper_next-btn">
+            <Icons.arrowRight.Broken />
+          </button>
+        </Navigations> */}
+      </SwiperContainer>
     </PartnersWrap>
   );
 };
