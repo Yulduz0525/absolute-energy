@@ -12,6 +12,7 @@ import {
 } from "./sidebar.s";
 import Styles, { Typography } from "@/styles";
 import Icons from "@/assets/icons";
+import { useRouter } from "next/router";
 
 interface ISidebarProps {
   open: boolean;
@@ -69,6 +70,7 @@ export const Sidebar: FC<ISidebarProps> = ({ open, onClose }) => {
         </SidebarCloseIcon>
         <Navigations />
       </SidebarWrap>
+
       <AnimatePresence>
         {open && (
           <SidebarBgClose
@@ -113,6 +115,8 @@ const Navigations: FC<INavigationProps> = () => {
     },
   };
 
+  const { pathname, route } = useRouter();
+
   return (
     <Styles.Row
       as={motion.div}
@@ -130,6 +134,7 @@ const Navigations: FC<INavigationProps> = () => {
             variants={childVariants}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            active={route === url}
           >
             <Link href={url}>
               <Typography.H5>{text}</Typography.H5>
