@@ -22,7 +22,7 @@ export default function Home() {
         {/* <Sections.Services /> */}
         {/* <Sections.ClientSays /> */}
         <Sections.Partners />
-        <Sections.FAQ />
+        {/* <Sections.FAQ /> */}
       </main>
     </>
   );
