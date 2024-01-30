@@ -45,7 +45,7 @@ export const NavsList = styled.ul`
   margin-top: 20px;
 `;
 
-export const NavItem = styled(motion.li)`
+export const NavItem = styled(motion.li)<{ active: boolean }>`
   && {
     position: relative;
     display: flex;
@@ -59,7 +59,6 @@ export const NavItem = styled(motion.li)`
 
       padding: 12px 0;
       transition: all ease-in-out 250ms;
-
     }
     &:after {
       content: "";
@@ -83,10 +82,34 @@ export const NavItem = styled(motion.li)`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      &::after {
-        width: 90%;
+      &:after {
+        ${({ active }) =>
+          active
+            ? css`
+                width: 20%;
+              `
+            : css`
+                width: 90%;
+              `}
       }
     }
+
+    ${({ active }) =>
+      active &&
+      css`
+        h5 {
+          background: var(
+            --gradient1,
+            linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &:after {
+          width: 20%;
+        }
+      `}
   }
 `;
 
@@ -97,7 +120,7 @@ export const SidebarCloseIcon = styled(motion.div)`
   svg {
     cursor: pointer;
   }
-`
+`;
 
 export const LogoLink = styled.div`
   && {

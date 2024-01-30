@@ -85,7 +85,7 @@ export const MenuButton = styled.button`
     stroke: #222;
   }
 `;
-export const NavItem = styled.li`
+export const NavItem = styled.li<{ active: boolean }>`
   && {
     list-style: none;
 
@@ -128,8 +128,32 @@ export const NavItem = styled.li`
         -webkit-text-fill-color: transparent;
       }
       &:after {
-        width: 90%;
+        ${({ active }) =>
+          active
+            ? css`
+                width: 20%;
+              `
+            : css`
+                width: 90%;
+              `}
       }
     }
+
+    ${({ active }) =>
+      active &&
+      css`
+        a {
+          background: var(
+            --gradient1,
+            linear-gradient(239deg, #0094ff -1.81%, #cd02ee 89.62%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &:after {
+          width: 20%;
+        }
+      `}
   }
 `;

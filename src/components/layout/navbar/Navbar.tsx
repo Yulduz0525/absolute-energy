@@ -14,7 +14,7 @@ interface INavbarProps {}
 export const Navbar: FC<INavbarProps> = ({}) => {
   const [menuOpen, setMenuOpen] = useCycle(false, true);
 
-  const { pathname } = useRouter();
+  const { pathname, route } = useRouter();
 
   return (
     <>
@@ -33,7 +33,7 @@ export const Navbar: FC<INavbarProps> = ({}) => {
           </Link>
           <NavList>
             {mock.navItems.map(({ text, url }, index) => (
-              <NavItem key={index}>
+              <NavItem key={index} active={route === url}>
                 <Link href={url}>
                   <Typography.H6 color="dark500">{text}</Typography.H6>
                 </Link>

@@ -60,16 +60,6 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
               gap={14}
             >
               <Styles.Column
-                direction="column"
-                align_items="flex-start"
-                gap={12}
-              >
-                <Animations.Title>
-                  <Typography.H5>About us</Typography.H5>
-                </Animations.Title>
-                <SubTitleLine />
-              </Styles.Column>
-              <Styles.Column
                 width="100%"
                 direction="column"
                 align_items="flex-start"
