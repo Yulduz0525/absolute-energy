@@ -41,7 +41,7 @@ export const portfolios = [
     id: 4,
     positionId: 4,
     bg: "/images/portfolios/4.png",
-    title: "Tashkent International Airport",
+    title: "Uzbekistan Airways",
     description: "Below models have been received for service - CATERPILLAR:",
     list: [
       "2 x 2500 kVA ",

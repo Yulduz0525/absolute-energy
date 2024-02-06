@@ -56,7 +56,7 @@ export default function ContactForm({}: Props) {
         <Styles.Column width="100%">
           <FormItem htmlFor="">
             <span>Сообщение *</span>
-            <MessageArea placeholder="Введите текст сообщении..." />
+            <MessageArea placeholder="Введите текст сообщения..." />
           </FormItem>
         </Styles.Column>
         <FormButton type="submit">Отправить</FormButton>
