@@ -73,8 +73,8 @@ export const AboutUs: FC<IAboutUsProps> = (props) => {
                   viewport={{ once: true }}
                 >
                   <Typography.LEAD_TEXT color="dark200">
-                    Компания «ABSOLUTE ENERGY» основана в 2016 г. и является
-                    официальным дилером торговых марок AKSA, Cummins, RID,
+                    Компания «ABSOLUTE ENERGY» основана в 2019 г. и является
+                    официальным дилером торговых марок ALIMAR, Cummins, RID,
                     GENPOWER и Mitsubishi на территории Республики Узбекистан.
                     На сегодняшний день продукция компании широко востребована в
                     нефтегазовой отрасли, а также в сегментах телекоммуникации,

@@ -13,7 +13,7 @@ export const bannerStat = [
   },
   {
     title: "5+",
-    subTitle: "5 лет опыт",
+    subTitle: "опыт работы более 5 лет",
     description: "Мы очень тщательно подходим под каждую задачу",
   },
 ];

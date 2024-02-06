@@ -51,7 +51,7 @@ export const Modal: FC<IModalProps> = ({ children, open, handleClose }) => {
               transition={{ ease: "easeOut", duration: 0.15 }}
             >
               {children}
-              <CloseBtn onClick={handleClose}>закрывать</CloseBtn>
+              <CloseBtn onClick={handleClose}>закрыть</CloseBtn>
             </ModalBlock>
           </ModalWrap>
         )}
