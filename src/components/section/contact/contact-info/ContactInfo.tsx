@@ -31,13 +31,7 @@ export const ContactInfo: FC<IContactInfoProps> = (props) => {
                   +998951455555
                 </Styles.Subtext>
               </Typography.H5>
-              <Typography.H5>
-                Телеграмма:{" "}
-                <Styles.Subtext style={{ opacity: "60%" }}>
-                  {" "}
-                  +998951455555
-                </Styles.Subtext>
-              </Typography.H5>
+
               <Typography.H5>
                 Электронная почта:{" "}
                 <Styles.Subtext style={{ opacity: "60%" }}>
