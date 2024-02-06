@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactFormWrap = styled.form`
   && {
     width: 100%;
-    max-width: 700px;
+    max-width: 992px;
 
     display: flex;
     flex-direction: column;

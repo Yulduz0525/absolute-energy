@@ -15,8 +15,8 @@ export const navFooter = {
     },
     {
       icon: Icons.location.Broken,
-      label: "Istiqbol ko'chasi 113, Тоshkent, Toshkent",
-      href: "https://maps.app.goo.gl/7FCrChQjHmmEAMPq5",
+      label: "г.Ташкент, ул.Бадамзар,д.78",
+      href: "https://maps.app.goo.gl/B2eXBjrPMXyjZdCk7",
     },
   ],
 

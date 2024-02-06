@@ -11,6 +11,7 @@ import components from "@/components";
 import Animations from "@/animations";
 import { motion } from "framer-motion";
 import VariantsSettings from "@/mock/variants-animation";
+import Image from "next/image";
 
 interface IMainServicesProps {}
 
@@ -29,7 +30,6 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
     title: null,
     description: null,
   });
-  
 
   return (
     <MainServicesWrap>
@@ -71,7 +71,13 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
                 >
                   <MainServicesItem>
                     <IconBlock id={index}>
-                      <mainService.icon />
+                      {/* <mainService.icon /> */}
+                      <Image
+                        src={mainService.img}
+                        alt="img"
+                        width={32}
+                        height={32}
+                      />
                     </IconBlock>
                     <Styles.Column width="100%" direction="column" gap={8}>
                       <Typography.H5>{mainService.title}</Typography.H5>
