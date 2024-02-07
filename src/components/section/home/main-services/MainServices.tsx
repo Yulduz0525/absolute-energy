@@ -22,11 +22,13 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
   const [open, setOpen] = useState<{
     id: number | null;
     icon: FC | null;
+    img: any;
     title: string | null;
     description: string | null;
   }>({
     id: null,
     icon: null,
+    img: null,
     title: null,
     description: null,
   });
@@ -91,6 +93,7 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
                         setOpen({
                           id: index,
                           icon: mainService.icon,
+                          img: mainService.img,
                           title: mainService.title,
                           description: mainService.description,
                         });
@@ -107,7 +110,10 @@ export const MainServices: FC<IMainServicesProps> = (props) => {
 
           <Common.Modal open={openType} handleClose={() => setOpenType(false)}>
             <IconBlock id={open.id ? open.id : 0} modal={!!open}>
-              {open.icon && <open.icon />}
+              {/* {open.icon && <open.icon />} */}
+              {open.icon && (
+                <Image src={open.img} alt="img" width={64} height={64} />
+              )}
             </IconBlock>
             <Typography.H3 align="center">{open.title}</Typography.H3>
             <Typography.LEAD_TEXT color="dark200" align="center">
