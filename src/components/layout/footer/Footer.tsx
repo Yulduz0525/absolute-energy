@@ -15,7 +15,7 @@ export const Footer: FC<IFooterProps> = ({}) => {
           <Styles.Column align_items="center" gap={12}>
             <Image
               height={48}
-              width={48}
+              width={48} 
               src="/images/Logo.png"
               alt="Brand logo"
             />

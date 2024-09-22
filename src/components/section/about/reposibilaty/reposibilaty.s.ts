@@ -1,6 +1,9 @@
 import Image from "next/image";
 import styled from "styled-components";
-
+export const TestWhatsapp = styled(Image)`
+  width:85px;
+  height:85px;
+`
 export const ReposibilatyWrap = styled.div`
   width: 100%;
 `;

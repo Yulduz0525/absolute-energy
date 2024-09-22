@@ -115,3 +115,4 @@ export const FormButton = styled.button`
   font-weight: 600;
   line-height: 145.5%; /* 29.1px */
 `;
+// export const FormChechbox = styled.button
